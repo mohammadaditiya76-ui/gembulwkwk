@@ -1,0 +1,2726 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cita Rasa MARON - Produk Tata Boga SMAN 1 MARON</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<script src="/_sdk/element_sdk.js"></script>
+<style>
+body {
+box-sizing: border-box;
+}
+
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+html, body {
+height: 100%;
+}
+
+body {
+font-family: 'Poppins', sans-serif;
+line-height: 1.6;
+overflow-x: hidden;
+background-color: #FFFFFF;
+color: #2C3E50;
+}
+
+/* === NAVIGATION === */
+.navbar {
+background-color: #FFFFFF;
+padding: 1.2rem 0;
+box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+position: sticky;
+top: 0;
+z-index: 1000;
+}
+
+.nav-container {
+display: flex;
+justify-content: space-between;
+align-items: center;
+max-width: 1200px;
+margin: 0 auto;
+padding: 0 2rem;
+}
+
+.logo {
+font-size: 1.6rem;
+font-weight: 700;
+text-decoration: none;
+letter-spacing: -0.5px;
+color: #1E88E5;
+}
+
+.nav-links {
+display: flex;
+gap: 2rem;
+align-items: center;
+}
+
+.nav-links a {
+text-decoration: none;
+font-weight: 500;
+transition: all 0.3s ease;
+position: relative;
+color: #2C3E50;
+cursor: pointer;
+}
+
+.nav-links .btn-order {
+background-color: #43A047;
+color: #FFFFFF;
+padding: 0.6rem 1.5rem;
+border-radius: 8px;
+margin-left: 1rem;
+}
+
+.nav-links .btn-order:hover {
+background-color: #388E3C;
+transform: translateY(-2px);
+}
+
+.nav-links a:not(.btn-order)::after {
+content: '';
+position: absolute;
+bottom: -5px;
+left: 0;
+width: 0;
+height: 2px;
+background-color: #1E88E5;
+transition: width 0.3s ease;
+}
+
+.nav-links a:not(.btn-order):hover::after {
+width: 100%;
+}
+
+/* === PAGE CONTAINER === */
+.page {
+display: none;
+}
+
+.page.active {
+display: block;
+}
+
+/* === HERO SECTION === */
+.hero {
+background: linear-gradient(135deg, #E3F2FD 0%, #FFF9E6 100%);
+padding: 5rem 2rem;
+display: flex;
+justify-content: space-between;
+align-items: center;
+max-width: 1200px;
+margin: 2rem auto;
+gap: 4rem;
+border-radius: 16px;
+}
+
+.hero-text {
+flex: 1;
+max-width: 550px;
+}
+
+.hero-text h1 {
+font-size: 3.5rem;
+margin-bottom: 1rem;
+line-height: 1.1;
+font-weight: 800;
+color: #1E88E5;
+}
+
+.hero-text p {
+font-size: 1.3rem;
+margin-bottom: 2rem;
+opacity: 0.9;
+color: #2C3E50;
+}
+
+.cta-buttons {
+display: flex;
+gap: 1rem;
+flex-wrap: wrap;
+}
+
+.btn {
+padding: 0.9rem 2rem;
+border: none;
+border-radius: 8px;
+cursor: pointer;
+font-weight: 600;
+font-size: 1rem;
+transition: all 0.3s ease;
+text-decoration: none;
+display: inline-block;
+}
+
+.btn-primary {
+background-color: #1E88E5;
+color: #FFFFFF;
+}
+
+.btn-primary:hover {
+background-color: #1565C0;
+transform: translateY(-2px);
+box-shadow: 0 6px 20px rgba(30, 136, 229, 0.3);
+}
+
+.btn-secondary {
+background-color: #43A047;
+color: #FFFFFF;
+}
+
+.btn-secondary:hover {
+background-color: #388E3C;
+transform: translateY(-2px);
+box-shadow: 0 6px 20px rgba(67, 160, 71, 0.3);
+}
+
+/* === HERO IMAGE === */
+.hero-image {
+flex: 1;
+max-width: 450px;
+height: 350px;
+background-color: #FFFFFF;
+border-radius: 16px;
+display: flex;
+justify-content: center;
+align-items: center;
+position: relative;
+overflow: hidden;
+box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+}
+
+.food-icon {
+font-size: 8rem;
+animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+0%, 100% { transform: translateY(0); }
+50% { transform: translateY(-20px); }
+}
+
+/* === HIGHLIGHTS SECTION === */
+.highlights {
+max-width: 1200px;
+margin: 4rem auto;
+padding: 0 2rem;
+}
+
+.highlights-container {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+gap: 2rem;
+}
+
+.highlight-card {
+background-color: #FFFFFF;
+text-align: center;
+padding: 2rem 1.5rem;
+border-radius: 12px;
+transition: all 0.3s ease;
+box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.highlight-card:hover {
+transform: translateY(-5px);
+box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.highlight-icon {
+font-size: 3.5rem;
+margin-bottom: 1rem;
+}
+
+.highlight-card h3 {
+font-size: 1.2rem;
+margin-bottom: 0.5rem;
+font-weight: 600;
+color: #2C3E50;
+}
+
+.highlight-card p {
+font-size: 0.95rem;
+opacity: 0.8;
+color: #2C3E50;
+}
+
+/* === PRODUCTS SECTION === */
+.products {
+max-width: 1200px;
+margin: 4rem auto;
+padding: 0 2rem;
+}
+
+.section-title {
+text-align: center;
+font-size: 2.5rem;
+margin-bottom: 3rem;
+font-weight: 700;
+color: #2C3E50;
+}
+
+.product-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+gap: 2rem;
+}
+
+.product-card {
+background-color: #FFFFFF;
+border-radius: 12px;
+overflow: hidden;
+transition: all 0.3s ease;
+box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+cursor: pointer;
+}
+
+.product-card:hover {
+transform: translateY(-8px);
+box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.product-image {
+width: 100%;
+height: 200px;
+background: linear-gradient(135deg, #FFF9E6 0%, #F9D97C 100%);
+display: flex;
+justify-content: center;
+align-items: center;
+font-size: 4rem;
+}
+
+.product-info {
+padding: 1.5rem;
+}
+
+.product-info h3 {
+font-size: 1.4rem;
+margin-bottom: 0.5rem;
+font-weight: 600;
+color: #2C3E50;
+}
+
+.product-info p {
+margin-bottom: 1rem;
+opacity: 0.8;
+color: #2C3E50;
+}
+
+.product-price {
+font-size: 1.3rem;
+font-weight: 700;
+margin-bottom: 1rem;
+color: #1E88E5;
+}
+
+/* === ABOUT SECTION === */
+.about {
+background-color: #FFFFFF;
+max-width: 1200px;
+margin: 5rem auto;
+padding: 4rem 2rem;
+text-align: center;
+border-radius: 16px;
+box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.about h2 {
+font-size: 2.5rem;
+margin-bottom: 1.5rem;
+font-weight: 700;
+color: #2C3E50;
+}
+
+.about p {
+font-size: 1.2rem;
+max-width: 800px;
+margin: 0 auto 2rem;
+line-height: 1.8;
+color: #2C3E50;
+}
+
+/* === TESTIMONIAL SECTION === */
+.testimonials {
+max-width: 1200px;
+margin: 4rem auto;
+padding: 0 2rem;
+}
+
+.testimonial-container {
+display: flex;
+gap: 2rem;
+overflow-x: auto;
+scroll-snap-type: x mandatory;
+padding-bottom: 1rem;
+}
+
+.testimonial-card {
+background-color: #FFFFFF;
+min-width: 350px;
+padding: 2rem;
+border-radius: 12px;
+box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+scroll-snap-align: start;
+}
+
+.testimonial-card p {
+font-size: 1.1rem;
+font-style: italic;
+margin-bottom: 1rem;
+color: #2C3E50;
+}
+
+.testimonial-author {
+font-weight: 600;
+color: #1E88E5;
+}
+
+/* === FOOTER === */
+.footer {
+background-color: #F5F7FA;
+padding: 3rem 2rem 1.5rem;
+margin-top: 4rem;
+border-top: 2px solid rgba(0, 0, 0, 0.05);
+}
+
+.footer-content {
+max-width: 1200px;
+margin: 0 auto;
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+gap: 2rem;
+margin-bottom: 2rem;
+}
+
+.footer-section h3 {
+font-size: 1.3rem;
+margin-bottom: 1rem;
+font-weight: 700;
+color: #1E88E5;
+}
+
+.footer-section p, .footer-section a {
+font-size: 0.95rem;
+margin-bottom: 0.5rem;
+opacity: 0.8;
+color: #2C3E50;
+text-decoration: none;
+display: block;
+}
+
+.footer-section a:hover {
+color: #1E88E5;
+padding-left: 5px;
+}
+
+.footer-logo {
+font-size: 1.8rem;
+font-weight: 700;
+color: #1E88E5;
+margin-bottom: 1rem;
+}
+
+.social-links {
+display: flex;
+gap: 1rem;
+margin-top: 1rem;
+}
+
+.social-links a {
+font-size: 1.5rem;
+transition: transform 0.3s ease;
+}
+
+.social-links a:hover {
+transform: scale(1.2);
+}
+
+.footer-bottom {
+text-align: center;
+padding-top: 1.5rem;
+border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.footer-bottom p {
+font-size: 0.9rem;
+opacity: 0.6;
+color: #2C3E50;
+}
+
+/* === PRODUCT FILTER === */
+.filter-buttons {
+display: flex;
+justify-content: center;
+gap: 1rem;
+margin-bottom: 2rem;
+flex-wrap: wrap;
+}
+
+.filter-btn {
+padding: 0.6rem 1.5rem;
+border: 2px solid #1E88E5;
+background-color: #FFFFFF;
+color: #1E88E5;
+border-radius: 25px;
+cursor: pointer;
+font-weight: 600;
+transition: all 0.3s ease;
+}
+
+.filter-btn:hover, .filter-btn.active {
+background-color: #1E88E5;
+color: #FFFFFF;
+}
+
+/* === PRODUCT DETAIL PAGE === */
+.product-detail {
+max-width: 1200px;
+margin: 3rem auto;
+padding: 0 2rem;
+}
+
+.product-detail-container {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 3rem;
+background-color: #FFFFFF;
+padding: 3rem;
+border-radius: 16px;
+box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.product-detail-image {
+width: 100%;
+height: 400px;
+background: linear-gradient(135deg, #FFF9E6 0%, #F9D97C 100%);
+display: flex;
+justify-content: center;
+align-items: center;
+font-size: 10rem;
+border-radius: 12px;
+}
+
+.product-detail-info h1 {
+font-size: 2.5rem;
+margin-bottom: 1rem;
+color: #2C3E50;
+}
+
+.product-detail-info .price {
+font-size: 2rem;
+color: #1E88E5;
+font-weight: 700;
+margin-bottom: 1.5rem;
+}
+
+.product-detail-info p {
+font-size: 1.1rem;
+line-height: 1.8;
+margin-bottom: 1.5rem;
+color: #2C3E50;
+}
+
+.composition {
+background-color: #F5F7FA;
+padding: 1.5rem;
+border-radius: 8px;
+margin-bottom: 2rem;
+}
+
+.composition h3 {
+font-size: 1.3rem;
+margin-bottom: 0.8rem;
+color: #2C3E50;
+}
+
+.composition ul {
+list-style-position: inside;
+color: #2C3E50;
+}
+
+.composition ul {
+list-style-position: inside;
+color: #2C3E50;
+}
+
+.back-btn {
+display: inline-block;
+margin-bottom: 2rem;
+color: #1E88E5;
+text-decoration: none;
+font-weight: 600;
+cursor: pointer;
+}
+
+.back-btn:hover {
+text-decoration: underline;
+}
+
+/* === ABOUT PAGE === */
+.about-page {
+max-width: 1200px;
+margin: 3rem auto;
+padding: 0 2rem;
+}
+
+.about-hero {
+text-align: center;
+margin-bottom: 4rem;
+}
+
+.about-hero h1 {
+font-size: 3rem;
+margin-bottom: 1rem;
+color: #1E88E5;
+}
+
+.about-gallery {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+gap: 2rem;
+margin-bottom: 4rem;
+}
+
+.gallery-item {
+height: 250px;
+background: linear-gradient(135deg, #E3F2FD 0%, #FFF9E6 100%);
+border-radius: 12px;
+display: flex;
+justify-content: center;
+align-items: center;
+font-size: 5rem;
+box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.about-content {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+gap: 3rem;
+}
+
+.about-box {
+background-color: #FFFFFF;
+padding: 2rem;
+border-radius: 12px;
+box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.about-box h2 {
+font-size: 1.8rem;
+margin-bottom: 1rem;
+color: #1E88E5;
+}
+
+.about-box ul {
+list-style-position: inside;
+color: #2C3E50;
+}
+
+.about-box li {
+margin-bottom: 0.5rem;
+}
+
+/* === CONTACT PAGE === */
+.contact-page {
+max-width: 1200px;
+margin: 3rem auto;
+padding: 0 2rem;
+}
+
+.contact-container {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 3rem;
+}
+
+.contact-form {
+background-color: #FFFFFF;
+padding: 2.5rem;
+border-radius: 12px;
+box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.contact-form h2 {
+font-size: 2rem;
+margin-bottom: 1.5rem;
+color: #1E88E5;
+}
+
+.form-group {
+margin-bottom: 1.5rem;
+}
+
+.form-group label {
+display: block;
+margin-bottom: 0.5rem;
+font-weight: 600;
+color: #2C3E50;
+}
+
+.form-group input,
+.form-group textarea {
+width: 100%;
+padding: 0.8rem;
+border: 2px solid #E0E0E0;
+border-radius: 8px;
+font-size: 1rem;
+transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+border-color: #1E88E5;
+outline: none;
+}
+
+.form-group textarea {
+resize: vertical;
+}
+
+.btn-submit {
+width: 100%;
+background-color: #43A047;
+color: #FFFFFF;
+padding: 1rem;
+border: none;
+border-radius: 8px;
+font-size: 1.1rem;
+font-weight: 600;
+cursor: pointer;
+transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-submit:hover {
+background-color: #388E3C;
+transform: translateY(-2px);
+}
+
+.success-message {
+background-color: #E8F5E9;
+color: #388E3C;
+padding: 1rem;
+border-radius: 8px;
+margin-top: 1rem;
+text-align: center;
+font-weight: 600;
+opacity: 0;
+transition: opacity 0.3s ease;
+}
+
+.success-message.show {
+opacity: 1;
+}
+
+.contact-info {
+display: grid;
+gap: 2rem;
+}
+
+.contact-box {
+background-color: #F5F7FA;
+padding: 1.5rem;
+border-radius: 12px;
+}
+
+.contact-box h3 {
+font-size: 1.5rem;
+margin-bottom: 0.5rem;
+color: #1E88E5;
+}
+
+.contact-box p {
+margin-bottom: 0.8rem;
+color: #2C3E50;
+}
+
+.contact-box a {
+color: #43A047;
+font-weight: 600;
+text-decoration: none;
+display: inline-block;
+}
+
+.contact-box a:hover {
+text-decoration: underline;
+}
+
+.map-placeholder {
+width: 100%;
+height: 200px;
+background: linear-gradient(135deg, #E3F2FD 0%, #90CAF9 100%);
+border-radius: 8px;
+display: flex;
+justify-content: center;
+align-items: center;
+font-size: 4rem;
+margin-top: 1rem;
+}
+
+/* === ADMIN PAGE STYLES === */
+.admin-modal {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-color: rgba(0, 0, 0, 0.5);
+display: flex;
+justify-content: center;
+align-items: center;
+z-index: 2000;
+opacity: 0;
+visibility: hidden;
+transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.admin-modal.show {
+opacity: 1;
+visibility: visible;
+}
+
+.admin-content {
+background-color: #FFFFFF;
+padding: 2rem;
+border-radius: 12px;
+box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+max-width: 400px;
+width: 90%;
+transform: translateY(-50px);
+transition: transform 0.3s ease;
+}
+
+.admin-modal.show .admin-content {
+transform: translateY(0);
+}
+
+.admin-content h2 {
+margin-bottom: 1rem;
+color: #1E88E5;
+}
+
+.admin-input {
+width: 100%;
+padding: 0.6rem;
+border: 1px solid #E0E0E0;
+border-radius: 6px;
+margin-top: 0.4rem;
+}
+
+.admin-input[type="color"] {
+height: 40px;
+padding: 0;
+}
+
+.admin-btn {
+padding: 0.7rem 1.5rem;
+border: none;
+border-radius: 6px;
+cursor: pointer;
+font-weight: 600;
+transition: background-color 0.3s ease;
+}
+
+.admin-btn-primary {
+background-color: #1E88E5;
+color: #FFFFFF;
+}
+
+.admin-btn-secondary {
+background-color: #F5F7FA;
+color: #2C3E50;
+border: 1px solid #E0E0E0;
+}
+
+.admin-actions {
+display: flex;
+justify-content: flex-end;
+gap: 1rem;
+margin-top: 1.5rem;
+}
+
+.login-error {
+color: #F44336;
+font-size: 0.9rem;
+margin-top: 0.5rem;
+opacity: 0;
+transition: opacity 0.3s ease;
+}
+
+.login-error.show {
+opacity: 1;
+}
+
+.password-group {
+position: relative;
+}
+
+.password-group .form-group input {
+padding-right: 3rem;
+}
+
+#toggle-password {
+position: absolute;
+right: 0.5rem;
+top: 50%;
+transform: translateY(0%);
+background: none;
+border: none;
+cursor: pointer;
+font-size: 1.2rem;
+padding: 0.5rem;
+opacity: 0.6;
+transition: opacity 0.3s ease;
+}
+
+.admin-page-content {
+max-width: 1200px;
+margin: 3rem auto;
+padding: 0 2rem;
+}
+
+.admin-header {
+display: flex;
+justify-content: space-between;
+align-items: center;
+margin-bottom: 2rem;
+}
+
+.admin-container {
+display: grid;
+grid-template-columns: 2fr 1fr;
+gap: 3rem;
+}
+
+.admin-section {
+margin-bottom: 2rem;
+}
+
+.admin-section h2 {
+font-size: 2rem;
+margin-bottom: 1.5rem;
+color: #2C3E50;
+}
+
+.admin-card {
+background-color: #FFFFFF;
+padding: 1.5rem;
+border-radius: 10px;
+box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+margin-bottom: 1.5rem;
+}
+
+.admin-card h3 {
+font-size: 1.2rem;
+margin-bottom: 1rem;
+color: #1E88E5;
+border-bottom: 1px solid #E0E0E0;
+padding-bottom: 0.5rem;
+}
+
+.color-input {
+height: 35px;
+padding: 0;
+border: none;
+cursor: pointer;
+}
+
+.admin-preview-section {
+position: sticky;
+top: 80px;
+height: 80vh;
+overflow-y: auto;
+padding: 1rem;
+background-color: #F5F7FA;
+border-radius: 12px;
+box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.admin-preview-section h2 {
+font-size: 1.8rem;
+margin-bottom: 1rem;
+color: #1E88E5;
+}
+
+.preview-site {
+background-color: #FFFFFF;
+padding: 1.5rem;
+border-radius: 8px;
+box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.preview-site img {
+max-width: 100%;
+height: auto;
+border-radius: 6px;
+}
+
+.featured-preview, .product-preview {
+background: linear-gradient(135deg, #FFF9E6 0%, #F9D97C 100%);
+height: 100px;
+border-radius: 8px;
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 3rem;
+margin-top: 0.5rem;
+}
+
+.featured-preview img, .product-preview img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
+
+.gallery-preview {
+background: linear-gradient(135deg, #E3F2FD 0%, #FFF9E6 100%);
+height: 100px;
+border-radius: 8px;
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 2rem;
+margin-top: 0.5rem;
+}
+
+.gallery-preview img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
+
+@media (max-width: 968px) {
+.admin-container {
+grid-template-columns: 1fr;
+}
+}
+
+</style>
+<style>@view-transition { navigation: auto; }</style>
+<script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+<script src="https://cdn.tailwindcss.com" type="text/javascript"></script>
+</head>
+<body>
+<nav class="navbar">
+<div class="nav-container">
+<a class="logo" id="site-title" data-page="home">Cita Rasa MARON</a>
+<div class="nav-links">
+<a data-page="home">Beranda</a>
+<a data-page="products">Produk</a>
+<a data-page="about">Tentang Kami</a>
+<a data-page="contact">Kontak</a>
+<a class="btn-order" id="nav-order-btn">Pesan Sekarang</a>
+</div>
+</div>
+</nav>
+
+<div id="home-page" class="page active">
+<section class="hero">
+<div class="hero-text">
+<h1 id="hero-title">Produk Tata Boga Terbaik dari SMAN 1 MARON</h1>
+<p id="hero-subtitle">Dibuat oleh siswa terampil dengan cita rasa berkualitas dan tampilan profesional.</p>
+<div class="cta-buttons">
+<a class="btn btn-primary" id="cta-primary" data-page="products">Lihat Produk</a>
+<a class="btn btn-secondary" id="cta-secondary" data-page="about">Tentang Kami</a>
+</div>
+</div>
+<div class="hero-image">
+<div class="food-icon">
+🎂
+</div>
+</div>
+</section>
+
+<section class="highlights">
+<div class="highlights-container">
+<div class="highlight-card">
+<div class="highlight-icon">
+🥇
+</div>
+<h3>Kualitas Terjamin</h3>
+<p>Dibuat dengan standar kebersihan tinggi</p>
+</div>
+<div class="highlight-card">
+<div class="highlight-icon">
+👩‍🍳
+</div>
+<h3>Resep Orisinal</h3>
+<p>Cita rasa unik dari siswa-siswi Tata Boga</p>
+</div>
+<div class="highlight-card">
+<div class="highlight-icon">
+🌱
+</div>
+<h3>Bahan Lokal Terbaik</h3>
+<p>Mendukung petani dan produk lokal</p>
+</div>
+<div class="highlight-card">
+<div class="highlight-icon">
+🚚
+</div>
+<h3>Siap Antar</h3>
+<p>Layanan pesan-antar ke seluruh wilayah Maron</p>
+</div>
+</div>
+</section>
+
+<section class="products">
+<h2 class="section-title">Produk Unggulan Kami</h2>
+<div class="product-grid">
+<div class="product-card" data-product="strawberry-cake" data-category="cake">
+<div class="product-image" id="featured-preview-1">
+🍰
+</div>
+<div class="product-info">
+<h3 class="product-name">Strawberry Cake</h3>
+<p>Cake lembut dengan lapisan krim strawberry segar.</p>
+<div class="product-price">Rp 25.000</div>
+<button class="btn btn-secondary btn-buy">Pesan</button>
+</div>
+</div>
+
+<div class="product-card" data-product="pudding-coklat" data-category="dessert">
+<div class="product-image" id="featured-preview-2">
+🍮
+</div>
+<div class="product-info">
+<h3 class="product-name">Pudding Coklat</h3>
+<p>Pudding lembut dengan topping coklat yang manis.</p>
+<div class="product-price">Rp 8.000</div>
+<button class="btn btn-secondary btn-buy">Pesan</button>
+</div>
+</div>
+
+<div class="product-card" data-product="roti-coklat" data-category="roti">
+<div class="product-image" id="featured-preview-3">
+🥐
+</div>
+<div class="product-info">
+<h3 class="product-name">Roti Manis Coklat</h3>
+<p>Roti lembut dengan isian coklat yang lumer.</p>
+<div class="product-price">Rp 5.000</div>
+<button class="btn btn-secondary btn-buy">Pesan</button>
+</div>
+</div>
+</div>
+</section>
+
+<section class="about">
+<h2 id="about-title">Tentang Program Tata Boga Kami</h2>
+<p id="about-desc">Program Tata Boga SMAN 1 Maron adalah wadah bagi siswa-siswi berbakat untuk mengembangkan keterampilan kuliner. Kami berkomitmen menyajikan produk berkualitas tinggi dengan cita rasa otentik dan tampilan profesional, sebagai bagian dari kurikulum kewirausahaan kami.</p>
+<a class="btn btn-primary" data-page="about">Pelajari Lebih Lanjut</a>
+</section>
+
+<section class="testimonials">
+<h2 class="section-title">Apa Kata Pelanggan Kami</h2>
+<div class="testimonial-container">
+<div class="testimonial-card">
+<p>"Produknya selalu fresh dan higienis. Rasa kuenya luar biasa, manisnya pas dan krimnya lembut. Sangat recommended!"</p>
+<div class="testimonial-author"> - Maya, Alumni SMAN 1 Maron </div>
+</div>
+<div class="testimonial-card">
+<p>"Saya suka banget onde-ondenya, renyah di luar dan isinya kacang hijau yang manis. Selalu beli kalau ada bazar di sekolah!"</p>
+<div class="testimonial-author"> - Budi, Guru SMAN 1 Maron </div>
+</div>
+<div class="testimonial-card">
+<p>"Pelayanannya ramah dan cepat. Es Buah Segarnya sangat menyegarkan. Sukses terus untuk Cita Rasa MARON!"</p>
+<div class="testimonial-author"> - Ibu Siti, Wali Murid </div>
+</div>
+</div>
+</section>
+</div>
+
+<div id="products-page" class="page">
+<section class="products">
+<h2 class="section-title">Semua Produk</h2>
+<div class="filter-buttons">
+<button class="filter-btn active" data-filter="all">Semua</button>
+<button class="filter-btn" data-filter="cake">Cake</button>
+<button class="filter-btn" data-filter="jajanan">Jajanan</button>
+<button class="filter-btn" data-filter="minuman">Minuman</button>
+<button class="filter-btn" data-filter="roti">Roti</button>
+</div>
+<div class="product-grid" id="all-products-grid">
+</div>
+</section>
+</div>
+
+<div id="detail-page" class="page">
+<section class="product-detail">
+<span class="back-btn" data-page="products">← Kembali ke Produk</span>
+<div class="product-detail-container">
+<div class="product-detail-image" id="detail-image">
+</div>
+<div class="product-detail-info">
+<h1 id="detail-name"></h1>
+<div class="price" id="detail-price"></div>
+<p id="detail-description"></p>
+<div class="composition">
+<h3>Komposisi Utama:</h3>
+<ul id="detail-ingredients">
+</ul>
+</div>
+<a class="btn btn-secondary" id="detail-order-btn">Pesan Sekarang (WhatsApp)</a>
+</div>
+</div>
+</section>
+</div>
+
+<div id="about-page" class="page">
+<section class="about-page">
+<div class="about-hero">
+<h1>Tentang Kami: Program Tata Boga SMAN 1 MARON</h1>
+<p style="font-size: 1.1rem; max-width: 900px; margin: 0 auto; line-height: 1.7;">Program ini adalah bagian dari kurikulum kewirausahaan yang bertujuan memberikan pengalaman langsung kepada siswa dalam memproduksi dan memasarkan produk kuliner berkualitas. Kami percaya bahwa keterampilan praktis adalah kunci kesuksesan di masa depan.</p>
+</div>
+
+<div class="about-gallery">
+<div class="gallery-item" id="gallery1-preview">
+👨‍🍳
+</div>
+<div class="gallery-item" id="gallery2-preview">
+🍰
+</div>
+<div class="gallery-item" id="gallery3-preview">
+📚
+</div>
+<div class="gallery-item" id="gallery4-preview">
+🏆
+</div>
+</div>
+
+<div class="about-content">
+<div class="about-box">
+<h2>Visi Kami</h2>
+<p id="about-vision">Menjadi program kuliner sekolah terbaik yang menghasilkan lulusan terampil, kreatif, dan berjiwa wirausaha, serta menyajikan produk makanan dan minuman yang unggul.</p>
+</div>
+<div class="about-box">
+<h2>Misi Kami</h2>
+<ul id="about-mission">
+<li>Memberikan pelatihan praktis berbasis standar industri.</li>
+<li>Mengembangkan resep orisinal dengan bahan lokal berkualitas.</li>
+<li>Membentuk mental wirausaha yang jujur dan profesional.</li>
+<li>Menghadirkan produk kuliner yang digemari oleh masyarakat Maron dan sekitarnya.</li>
+</ul>
+</div>
+</div>
+</section>
+</div>
+
+<div id="contact-page" class="page">
+<section class="contact-page">
+<h2 class="section-title">Hubungi Kami</h2>
+<div class="contact-container">
+<div class="contact-form">
+<h2>Kirim Pesan</h2>
+<form id="contact-form">
+<div class="form-group">
+<label for="name">Nama Anda</label>
+<input type="text" id="name" required>
+</div>
+<div class="form-group">
+<label for="email">Email Anda</label>
+<input type="email" id="email" required>
+</div>
+<div class="form-group">
+<label for="message">Pesan</label>
+<textarea id="message" rows="5" required></textarea>
+</div>
+<button type="submit" class="btn-submit">Kirim Pesan</button>
+<div class="success-message" id="success-message">
+✓ Pesan Anda berhasil dikirim! Kami akan segera menghubungi Anda.
+</div>
+</form>
+</div>
+<div class="contact-info">
+<div class="contact-box">
+<h3>📱 WhatsApp</h3>
+<p>Hubungi kami langsung via WhatsApp untuk pemesanan cepat:</p>
+<a href="#" id="contact-whatsapp" target="_blank" rel="noopener noreferrer">+62 812-3456-789</a>
+</div>
+<div class="contact-box">
+<h3>📸 Instagram</h3>
+<p>Follow kami untuk update produk terbaru:</p>
+<a href="#" id="contact-instagram" target="_blank" rel="noopener noreferrer">@citarasamaron</a>
+</div>
+<div class="contact-box">
+<h3>📍 Lokasi</h3>
+<p id="school-location">SMAN 1 Maron<br> Jl. Pendidikan No. 123, Maron<br> Kabupaten Probolinggo, Jawa Timur</p>
+<div class="map-placeholder" id="location-map-preview">
+🗺️
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+
+<div id="admin-page" class="page">
+<section class="admin-page-content">
+<div class="admin-header">
+<h1>⚙️ Panel Admin</h1>
+<div class="admin-actions">
+<button id="save-admin-btn" class="admin-btn admin-btn-primary">💾 Simpan Perubahan</button>
+</div>
+</div>
+<div class="admin-container">
+<div class="admin-section">
+<h2>📝 Konten Website</h2>
+<div class="admin-card">
+<h3>Header &amp; Navigasi</h3>
+<div class="form-group">
+<label for="admin-site-title">Judul Website</label>
+<input type="text" id="admin-site-title" class="admin-input">
+</div>
+</div>
+<div class="admin-card">
+<h3>Hero Section</h3>
+<div class="form-group">
+<label for="admin-hero-title">Judul Utama</label>
+<input type="text" id="admin-hero-title" class="admin-input">
+</div>
+<div class="form-group">
+<label for="admin-hero-subtitle">Subjudul</label>
+<textarea id="admin-hero-subtitle" class="admin-input" rows="3"></textarea>
+</div>
+<div class="form-group">
+<label for="admin-cta-primary">Tombol Utama</label>
+<input type="text" id="admin-cta-primary" class="admin-input">
+</div>
+<div class="form-group">
+<label for="admin-cta-secondary">Tombol Kedua</label>
+<input type="text" id="admin-cta-secondary" class="admin-input">
+</div>
+</div>
+<div class="admin-card">
+<h3>Tentang Kami</h3>
+<div class="form-group">
+<label for="admin-about-desc">Deskripsi Singkat</label>
+<textarea id="admin-about-desc" class="admin-input" rows="3"></textarea>
+</div>
+<div class="form-group">
+<label for="admin-vision">Visi</label>
+<textarea id="admin-vision" class="admin-input" rows="2"></textarea>
+</div>
+<div class="form-group">
+<label for="admin-mission">Misi</label>
+<textarea id="admin-mission" class="admin-input" rows="2"></textarea>
+</div>
+</div>
+<div class="admin-card">
+<h3>Testimoni</h3>
+<div class="form-group">
+<label for="admin-testimonial1-text">Testimoni 1</label>
+<textarea id="admin-testimonial1-text" class="admin-input" rows="3"></textarea>
+</div>
+<div class="form-group">
+<label for="admin-testimonial1-author">Penulis 1</label>
+<input type="text" id="admin-testimonial1-author" class="admin-input">
+</div>
+<div class="form-group">
+<label for="admin-testimonial2-text">Testimoni 2</label>
+<textarea id="admin-testimonial2-text" class="admin-input" rows="3"></textarea>
+</div>
+<div class="form-group">
+<label for="admin-testimonial2-author">Penulis 2</label>
+<input type="text" id="admin-testimonial2-author" class="admin-input">
+</div>
+<div class="form-group">
+<label for="admin-testimonial3-text">Testimoni 3</label>
+<textarea id="admin-testimonial3-text" class="admin-input" rows="3"></textarea>
+</div>
+<div class="form-group">
+<label for="admin-testimonial3-author">Penulis 3</label>
+<input type="text" id="admin-testimonial3-author" class="admin-input">
+</div>
+</div>
+<div class="admin-card">
+<h3>Kontak &amp; Footer</h3>
+<div class="form-group">
+<label for="admin-whatsapp">Nomor WhatsApp (+62...)</label>
+<input type="text" id="admin-whatsapp" class="admin-input">
+</div>
+<div class="form-group">
+<label for="admin-whatsapp-link">Link WhatsApp Custom (opsional)</label>
+<input type="text" id="admin-whatsapp-link" class="admin-input">
+</div>
+<div class="form-group">
+<label for="admin-instagram">Handle Instagram (@...)</label>
+<input type="text" id="admin-instagram" class="admin-input">
+</div>
+<div class="form-group">
+<label for="admin-instagram-link">Link Instagram Custom (opsional)</label>
+<input type="text" id="admin-instagram-link" class="admin-input">
+</div>
+<div class="form-group">
+<label for="admin-email">Alamat Email</label>
+<input type="email" id="admin-email" class="admin-input">
+</div>
+<div class="form-group">
+<label for="admin-email-link">Link Email Custom (opsional)</label>
+<input type="text" id="admin-email-link" class="admin-input">
+</div>
+<div class="form-group">
+<label for="admin-address">Alamat Sekolah</label>
+<textarea id="admin-address" class="admin-input" rows="3"></textarea>
+</div>
+<div class="form-group">
+<label for="admin-footer">Teks Hak Cipta Footer</label>
+<input type="text" id="admin-footer" class="admin-input">
+</div>
+</div>
+</div>
+
+<div class="admin-section">
+<h2>🖼️ Gambar &amp; Visual</h2>
+
+<div class="admin-card">
+<h3>Gambar Utama (Hero)</h3>
+<div class="form-group">
+<label for="admin-hero-image-file">Upload Gambar Hero</label>
+<input type="file" id="admin-hero-image-file" class="admin-input" accept="image/*" style="padding: 0.5rem;">
+<small style="display: block; margin-top: 0.5rem; opacity: 0.7;">Kosongkan untuk emoji default 🎂</small>
+</div>
+<div id="hero-image-preview" class="featured-preview">
+🎂
+</div>
+<button type="button" id="remove-hero-image" class="admin-btn admin-btn-secondary" style="margin-top: 0.5rem; display: none;">🗑️ Hapus Gambar</button>
+</div>
+
+<div class="admin-card">
+<h3>✨ Produk Unggulan</h3>
+<p style="margin-bottom: 1rem; opacity: 0.8; font-size: 0.95rem;">Upload gambar untuk produk yang ditampilkan di halaman Beranda. Kosongkan untuk menggunakan emoji default.</p>
+
+<div class="form-group" style="border-bottom: 1px solid rgba(0,0,0,0.05); padding-bottom: 1rem; margin-bottom: 1rem;">
+<label for="featured-img-1"><strong>Produk Unggulan 1: Strawberry Cake</strong></label>
+<input type="file" id="featured-img-1" class="admin-input featured-image-input" data-featured="1" accept="image/*" style="padding: 0.5rem;">
+<small style="display: block; margin-top: 0.5rem; opacity: 0.7;">Emoji default: 🍰</small>
+<div id="featured-preview-1" class="featured-preview" style="margin-top: 0.5rem; height: 120px; border-radius: 8px; background: linear-gradient(135deg, #FFF9E6 0%, #F9D97C 100%); display: flex; align-items: center; justify-content: center; font-size: 3rem;">
+🍰
+</div>
+<button type="button" class="featured-remove-btn" data-featured="1" style="margin-top: 0.5rem; padding: 0.4rem 0.8rem; background-color: #f44336; color: white; border: none; border-radius: 6px; cursor: pointer; display: none;">🗑️ Hapus</button>
+</div>
+
+<div class="form-group" style="border-bottom: 1px solid rgba(0,0,0,0.05); padding-bottom: 1rem; margin-bottom: 1rem;">
+<label for="featured-img-2"><strong>Produk Unggulan 2: Pudding Coklat</strong></label>
+<input type="file" id="featured-img-2" class="admin-input featured-image-input" data-featured="2" accept="image/*" style="padding: 0.5rem;">
+<small style="display: block; margin-top: 0.5rem; opacity: 0.7;">Emoji default: 🍮</small>
+<div id="featured-preview-2" class="featured-preview" style="margin-top: 0.5rem; height: 120px; border-radius: 8px; background: linear-gradient(135deg, #FFF9E6 0%, #F9D97C 100%); display: flex; align-items: center; justify-content: center; font-size: 3rem;">
+🍮
+</div>
+<button type="button" class="featured-remove-btn" data-featured="2" style="margin-top: 0.5rem; padding: 0.4rem 0.8rem; background-color: #f44336; color: white; border: none; border-radius: 6px; cursor: pointer; display: none;">🗑️ Hapus</button>
+</div>
+
+<div class="form-group">
+<label for="featured-img-3"><strong>Produk Unggulan 3: Roti Manis Coklat</strong></label>
+<input type="file" id="featured-img-3" class="admin-input featured-image-input" data-featured="3" accept="image/*" style="padding: 0.5rem;">
+<small style="display: block; margin-top: 0.5rem; opacity: 0.7;">Emoji default: 🥐</small>
+<div id="featured-preview-3" class="featured-preview" style="margin-top: 0.5rem; height: 120px; border-radius: 8px; background: linear-gradient(135deg, #FFF9E6 0%, #F9D97C 100%); display: flex; align-items: center; justify-content: center; font-size: 3rem;">
+🥐
+</div>
+<button type="button" class="featured-remove-btn" data-featured="3" style="margin-top: 0.5rem; padding: 0.4rem 0.8rem; background-color: #f44336; color: white; border: none; border-radius: 6px; cursor: pointer; display: none;">🗑️ Hapus</button>
+</div>
+</div>
+
+<div class="admin-card">
+<h3>📷 Galeri (Halaman Tentang Kami)</h3>
+<div class="form-group" style="border-bottom: 1px solid rgba(0,0,0,0.05); padding-bottom: 1rem; margin-bottom: 1rem;">
+<label for="admin-gallery1-file">Upload Gambar Gallery 1</label>
+<input type="file" id="admin-gallery1-file" class="admin-input" accept="image/*" style="padding: 0.5rem;">
+<small style="display: block; margin-top: 0.5rem; opacity: 0.7;">Kosongkan untuk emoji 👨‍🍳</small>
+<div id="gallery1-preview" class="gallery-preview">
+👨‍🍳
+</div>
+<button type="button" class="gallery-remove-btn" data-gallery="1" style="margin-top: 0.5rem; padding: 0.4rem 0.8rem; background-color: #f44336; color: white; border: none; border-radius: 6px; cursor: pointer; display: none;">🗑️ Hapus</button>
+</div>
+<div class="form-group" style="border-bottom: 1px solid rgba(0,0,0,0.05); padding-bottom: 1rem; margin-bottom: 1rem;">
+<label for="admin-gallery2-file">Upload Gambar Gallery 2</label>
+<input type="file" id="admin-gallery2-file" class="admin-input" accept="image/*" style="padding: 0.5rem;">
+<small style="display: block; margin-top: 0.5rem; opacity: 0.7;">Kosongkan untuk emoji 🍰</small>
+<div id="gallery2-preview" class="gallery-preview">
+🍰
+</div>
+<button type="button" class="gallery-remove-btn" data-gallery="2" style="margin-top: 0.5rem; padding: 0.4rem 0.8rem; background-color: #f44336; color: white; border: none; border-radius: 6px; cursor: pointer; display: none;">🗑️ Hapus</button>
+</div>
+<div class="form-group" style="border-bottom: 1px solid rgba(0,0,0,0.05); padding-bottom: 1rem; margin-bottom: 1rem;">
+<label for="admin-gallery3-file">Upload Gambar Gallery 3</label>
+<input type="file" id="admin-gallery3-file" class="admin-input" accept="image/*" style="padding: 0.5rem;">
+<small style="display: block; margin-top: 0.5rem; opacity: 0.7;">Kosongkan untuk emoji 📚</small>
+<div id="gallery3-preview" class="gallery-preview">
+📚
+</div>
+<button type="button" class="gallery-remove-btn" data-gallery="3" style="margin-top: 0.5rem; padding: 0.4rem 0.8rem; background-color: #f44336; color: white; border: none; border-radius: 6px; cursor: pointer; display: none;">🗑️ Hapus</button>
+</div>
+<div class="form-group">
+<label for="admin-gallery4-file">Upload Gambar Gallery 4</label>
+<input type="file" id="admin-gallery4-file" class="admin-input" accept="image/*" style="padding: 0.5rem;">
+<small style="display: block; margin-top: 0.5rem; opacity: 0.7;">Kosongkan untuk emoji 🏆</small>
+<div id="gallery4-preview" class="gallery-preview">
+🏆
+</div>
+<button type="button" class="gallery-remove-btn" data-gallery="4" style="margin-top: 0.5rem; padding: 0.4rem 0.8rem; background-color: #f44336; color: white; border: none; border-radius: 6px; cursor: pointer; display: none;">🗑️ Hapus</button>
+</div>
+</div>
+
+<div class="admin-card">
+<h3>🍽️ Gambar Produk</h3>
+<p style="margin-bottom: 1rem; opacity: 0.8; font-size: 0.95rem;">Upload gambar untuk setiap produk. Kosongkan untuk menggunakan emoji default.</p>
+
+<div class="form-group" style="border-bottom: 1px solid rgba(0,0,0,0.05); padding-bottom: 1rem; margin-bottom: 1rem;">
+<label for="product-img-strawberry-cake"><strong>Strawberry Cake</strong></label>
+<input type="file" id="product-img-strawberry-cake" class="admin-input product-image-input" data-product="strawberry-cake" accept="image/*" style="padding: 0.5rem;">
+<small style="display: block; margin-top: 0.5rem; opacity: 0.7;">Emoji default: 🍰</small>
+<div id="product-preview-strawberry-cake" class="product-preview">
+🍰
+</div>
+<button type="button" class="product-remove-btn" data-product="strawberry-cake" style="margin-top: 0.5rem; padding: 0.4rem 0.8rem; background-color: #f44336; color: white; border: none; border-radius: 6px; cursor: pointer; display: none;">🗑️ Hapus</button>
+</div>
+
+<div class="form-group" style="border-bottom: 1px solid rgba(0,0,0,0.05); padding-bottom: 1rem; margin-bottom: 1rem;">
+<label for="product-img-pudding-coklat"><strong>Pudding Coklat</strong></label>
+<input type="file" id="product-img-pudding-coklat" class="admin-input product-image-input" data-product="pudding-coklat" accept="image/*" style="padding: 0.5rem;">
+<small style="display: block; margin-top: 0.5rem; opacity: 0.7;">Emoji default: 🍮</small>
+<div id="product-preview-pudding-coklat" class="product-preview">
+🍮
+</div>
+<button type="button" class="product-remove-btn" data-product="pudding-coklat" style="margin-top: 0.5rem; padding: 0.4rem 0.8rem; background-color: #f44336; color: white; border: none; border-radius: 6px; cursor: pointer; display: none;">🗑️ Hapus</button>
+</div>
+
+<div class="form-group" style="border-bottom: 1px solid rgba(0,0,0,0.05); padding-bottom: 1rem; margin-bottom: 1rem;">
+<label for="product-img-roti-coklat"><strong>Roti Manis Coklat</strong></label>
+<input type="file" id="product-img-roti-coklat" class="admin-input product-image-input" data-product="roti-coklat" accept="image/*" style="padding: 0.5rem;">
+<small style="display: block; margin-top: 0.5rem; opacity: 0.7;">Emoji default: 🥐</small>
+<div id="product-preview-roti-coklat" class="product-preview">
+🥐
+</div>
+<button type="button" class="product-remove-btn" data-product="roti-coklat" style="margin-top: 0.5rem; padding: 0.4rem 0.8rem; background-color: #f44336; color: white; border: none; border-radius: 6px; cursor: pointer; display: none;">🗑️ Hapus</button>
+</div>
+
+<div class="form-group" style="border-bottom: 1px solid rgba(0,0,0,0.05); padding-bottom: 1rem; margin-bottom: 1rem;">
+<label for="product-img-tiramisu-cake"><strong>Tiramisu Cake</strong></label>
+<input type="file" id="product-img-tiramisu-cake" class="admin-input product-image-input" data-product="tiramisu-cake" accept="image/*" style="padding: 0.5rem;">
+<small style="display: block; margin-top: 0.5rem; opacity: 0.7;">Emoji default: 🎂</small>
+<div id="product-preview-tiramisu-cake" class="product-preview" style="margin-top: 0.5rem; height: 120px; border-radius: 8px; background: linear-gradient(135deg, #FFF9E6 0%, #F9D97C 100%); display: flex; align-items: center; justify-content: center; font-size: 3rem;">
+🎂
+</div>
+<button type="button" class="product-remove-btn" data-product="tiramisu-cake" style="margin-top: 0.5rem; padding: 0.4rem 0.8rem; background-color: #f44336; color: white; border: none; border-radius: 6px; cursor: pointer; display: none;">🗑️ Hapus</button>
+</div>
+
+<div class="form-group" style="border-bottom: 1px solid rgba(0,0,0,0.05); padding-bottom: 1rem; margin-bottom: 1rem;">
+<label for="product-img-es-buah"><strong>Es Buah Segar</strong></label>
+<input type="file" id="product-img-es-buah" class="admin-input product-image-input" data-product="es-buah" accept="image/*" style="padding: 0.5rem;">
+<small style="display: block; margin-top: 0.5rem; opacity: 0.7;">Emoji default: 🍹</small>
+<div id="product-preview-es-buah" class="product-preview">
+🍹
+</div>
+<button type="button" class="product-remove-btn" data-product="es-buah" style="margin-top: 0.5rem; padding: 0.4rem 0.8rem; background-color: #f44336; color: white; border: none; border-radius: 6px; cursor: pointer; display: none;">🗑️ Hapus</button>
+</div>
+
+<div class="form-group" style="border-bottom: 1px solid rgba(0,0,0,0.05); padding-bottom: 1rem; margin-bottom: 1rem;">
+<label for="product-img-klepon"><strong>Klepon</strong></label>
+<input type="file" id="product-img-klepon" class="admin-input product-image-input" data-product="klepon" accept="image/*" style="padding: 0.5rem;">
+<small style="display: block; margin-top: 0.5rem; opacity: 0.7;">Emoji default: 🟢</small>
+<div id="product-preview-klepon" class="product-preview">
+🟢
+</div>
+<button type="button" class="product-remove-btn" data-product="klepon" style="margin-top: 0.5rem; padding: 0.4rem 0.8rem; background-color: #f44336; color: white; border: none; border-radius: 6px; cursor: pointer; display: none;">🗑️ Hapus</button>
+</div>
+
+<div class="form-group" style="border-bottom: 1px solid rgba(0,0,0,0.05); padding-bottom: 1rem; margin-bottom: 1rem;">
+<label for="product-img-jus-alpukat"><strong>Jus Alpukat</strong></label>
+<input type="file" id="product-img-jus-alpukat" class="admin-input product-image-input" data-product="jus-alpukat" accept="image/*" style="padding: 0.5rem;">
+<small style="display: block; margin-top: 0.5rem; opacity: 0.7;">Emoji default: 🥑</small>
+<div id="product-preview-jus-alpukat" class="product-preview">
+🥑
+</div>
+<button type="button" class="product-remove-btn" data-product="jus-alpukat" style="margin-top: 0.5rem; padding: 0.4rem 0.8rem; background-color: #f44336; color: white; border: none; border-radius: 6px; cursor: pointer; display: none;">🗑️ Hapus</button>
+</div>
+
+<div class="form-group" style="padding-bottom: 1rem;">
+<label for="product-img-onde-onde"><strong>Onde-Onde</strong></label>
+<input type="file" id="product-img-onde-onde" class="admin-input product-image-input" data-product="onde-onde" accept="image/*" style="padding: 0.5rem;">
+<small style="display: block; margin-top: 0.5rem; opacity: 0.7;">Emoji default: 🔴</small>
+<div id="product-preview-onde-onde" class="product-preview">
+🔴
+</div>
+<button type="button" class="product-remove-btn" data-product="onde-onde" style="margin-top: 0.5rem; padding: 0.4rem 0.8rem; background-color: #f44336; color: white; border: none; border-radius: 6px; cursor: pointer; display: none;">🗑️ Hapus</button>
+</div>
+</div>
+
+<div class="admin-card">
+<h3>📍 Gambar Lokasi</h3>
+<div class="form-group">
+<label for="admin-location-map">Teks Placeholder Peta</label>
+<input type="text" id="admin-location-map" class="admin-input">
+</div>
+<div id="location-map-upload-section" style="display: none;">
+<div class="form-group">
+<label for="admin-location-map-file">Upload Gambar Lokasi/Peta</label>
+<input type="file" id="admin-location-map-file" class="admin-input" accept="image/*" style="padding: 0.5rem;">
+<small style="display: block; margin-top: 0.5rem; opacity: 0.7;">Upload gambar peta lokasi sekolah atau kosongkan untuk emoji 🗺️</small>
+</div>
+<div style="margin-top: 1rem; padding: 1rem; background-color: rgba(0,0,0,0.03); border-radius: 8px;">
+<strong style="display: block; margin-bottom: 0.5rem;">Preview:</strong>
+<div id="location-map-preview" style="width: 100%; height: 250px; background: linear-gradient(135deg, #E3F2FD 0%, #90CAF9 100%); border-radius: 12px; display: flex; justify-content: center; align-items: center; font-size: 4rem; position: relative;">
+🗺️
+</div>
+<button type="button" id="remove-location-map" class="btn" style="margin-top: 0.5rem; background-color: #f44336; color: white; display: none;">🗑️ Hapus Gambar</button>
+</div>
+</div>
+</div>
+
+<div class="admin-card">
+<h3>📸 Icon/Logo Media Sosial</h3>
+<p style="margin-bottom: 1rem; opacity: 0.8; font-size: 0.95rem;">Upload icon custom untuk media sosial atau kosongkan untuk menggunakan emoji default.</p>
+<div class="form-group" style="border-bottom: 1px solid rgba(0,0,0,0.05); padding-bottom: 1rem; margin-bottom: 1rem;">
+<label for="social-img-wa">Icon WhatsApp (default: 📱)</label>
+<input type="file" id="social-img-wa" class="admin-input social-icon-input" data-social="wa" accept="image/*" style="padding: 0.5rem;">
+<div id="social-preview-wa" style="font-size: 2rem; margin-top: 0.5rem; text-align: center;">
+📱
+</div>
+<button type="button" class="social-remove-btn" data-social="wa" style="margin-top: 0.5rem; padding: 0.4rem 0.8rem; background-color: #f44336; color: white; border: none; border-radius: 6px; cursor: pointer; display: none;">🗑️ Hapus</button>
+</div>
+
+<div class="form-group" style="border-bottom: 1px solid rgba(0,0,0,0.05); padding-bottom: 1rem; margin-bottom: 1rem;">
+<label for="social-img-ig">Icon Instagram (default: 📸)</label>
+<input type="file" id="social-img-ig" class="admin-input social-icon-input" data-social="ig" accept="image/*" style="padding: 0.5rem;">
+<div id="social-preview-ig" style="font-size: 2rem; margin-top: 0.5rem; text-align: center;">
+📸
+</div>
+<button type="button" class="social-remove-btn" data-social="ig" style="margin-top: 0.5rem; padding: 0.4rem 0.8rem; background-color: #f44336; color: white; border: none; border-radius: 6px; cursor: pointer; display: none;">🗑️ Hapus</button>
+</div>
+
+<div class="form-group">
+<label for="social-img-email">Icon Email (default: 📧)</label>
+<input type="file" id="social-img-email" class="admin-input social-icon-input" data-social="email" accept="image/*" style="padding: 0.5rem;">
+<div id="social-preview-email" style="font-size: 2rem; margin-top: 0.5rem; text-align: center;">
+📧
+</div>
+<button type="button" class="social-remove-btn" data-social="email" style="margin-top: 0.5rem; padding: 0.4rem 0.8rem; background-color: #f44336; color: white; border: none; border-radius: 6px; cursor: pointer; display: none;">🗑️ Hapus</button>
+</div>
+</div>
+
+<div class="admin-card">
+<h2 style="margin-top: 2rem;">🎨 Warna &amp; Gaya</h2>
+<div class="admin-card">
+<div class="form-group">
+<label for="admin-bg-color">Warna Background</label>
+<input type="color" id="admin-bg-color" class="admin-input color-input">
+</div>
+<div class="form-group">
+<label for="admin-surface-color">Warna Kartu/Card</label>
+<input type="color" id="admin-surface-color" class="admin-input color-input">
+</div>
+<div class="form-group">
+<label for="admin-text-color">Warna Teks</label>
+<input type="color" id="admin-text-color" class="admin-input color-input">
+</div>
+<div class="form-group">
+<label for="admin-primary-color">Warna Utama (Biru)</label>
+<input type="color" id="admin-primary-color" class="admin-input color-input">
+</div>
+<div class="form-group">
+<label for="admin-secondary-color">Warna Sekunder (Hijau)</label>
+<input type="color" id="admin-secondary-color" class="admin-input color-input">
+</div>
+<div class="form-group">
+<label for="admin-font-size">Ukuran Font (px)</label>
+<input type="number" id="admin-font-size" class="admin-input" min="12" max="24">
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="save-success" class="success-message" style="position: fixed; bottom: 20px; right: 20px; z-index: 2001; opacity: 0;"></div>
+</section>
+</div>
+
+<footer class="footer">
+<div class="footer-content">
+<div class="footer-section">
+<div class="footer-logo"> Cita Rasa MARON </div>
+<p>Program Tata Boga SMAN 1 Maron menghadirkan produk kuliner berkualitas dari siswa-siswi berbakat.</p>
+<div class="social-links">
+<a href="#" id="footer-social-wa" target="_blank" rel="noopener noreferrer">📱</a>
+<a href="#" id="footer-social-ig" target="_blank" rel="noopener noreferrer">📸</a>
+<a href="#" id="footer-social-email" target="_blank" rel="noopener noreferrer">📧</a>
+</div>
+</div>
+<div class="footer-section">
+<h3>Menu Cepat</h3>
+<a data-page="home">Beranda</a>
+<a data-page="products">Produk</a>
+<a data-page="about">Tentang Kami</a>
+<a data-page="contact">Kontak</a>
+</div>
+<div class="footer-section">
+<h3>Kontak</h3>
+<p id="footer-whatsapp-text">WhatsApp: +62 812-3456-789</p>
+<p id="footer-instagram-text">Instagram: @citarasamaron</p>
+<p id="footer-email-text">Email: kontak@citarasamaron.com</p>
+</div>
+<div class="footer-section">
+<h3>Alamat</h3>
+<p id="footer-address">SMAN 1 Maron<br> Jl. Pendidikan No. 123, Maron<br> Probolinggo, Jawa Timur</p>
+</div>
+</div>
+<div class="footer-bottom">
+<p id="footer-text">© 2023 Cita Rasa MARON. All Rights Reserved.</p>
+</div>
+</footer>
+
+<div id="admin-login-modal" class="admin-modal">
+<div class="admin-content">
+<h2>🔒 Login Admin</h2>
+<form id="admin-login-form">
+<div class="form-group password-group">
+<label for="admin-password">Password</label>
+<input type="password" id="admin-password" class="admin-input" required>
+<button type="button" id="toggle-password">👁️</button>
+</div>
+<div id="login-error" class="login-error">Password salah. Silakan coba lagi.</div>
+<div class="admin-actions">
+<button type="button" id="cancel-login" class="admin-btn admin-btn-secondary">Batal</button>
+<button type="submit" class="admin-btn admin-btn-primary">Login</button>
+</div>
+</form>
+</div>
+</div>
+
+<div id="save-confirm-modal" class="admin-modal">
+<div class="admin-content">
+<h2>Simpan Perubahan?</h2>
+<p>Anda yakin ingin menyimpan semua perubahan konfigurasi yang telah dilakukan?</p>
+<div class="admin-actions">
+<button type="button" id="cancel-save-btn" class="admin-btn admin-btn-secondary">Batal</button>
+<button type="button" id="confirm-save-btn" class="admin-btn admin-btn-primary">Simpan</button>
+</div>
+</div>
+</div>
+
+<script>
+// =======================================================
+// JAVASCRIPT LOGIC
+// =======================================================
+
+const ADMIN_PASSWORD = 'password123';
+let isAdminLoggedIn = false;
+
+// Default Configuration
+const defaultConfig = {
+    site_title: 'Cita Rasa MARON',
+    hero_title: 'Produk Tata Boga Terbaik dari SMAN 1 MARON',
+    hero_subtitle: 'Dibuat oleh siswa terampil dengan cita rasa berkualitas dan tampilan profesional.',
+    cta_primary: 'Lihat Produk',
+    cta_secondary: 'Tentang Kami',
+    about_description: 'Program Tata Boga SMAN 1 Maron adalah wadah bagi siswa-siswi berbakat untuk mengembangkan keterampilan kuliner. Kami berkomitmen menyajikan produk berkualitas tinggi dengan cita rasa otentik dan tampilan profesional, sebagai bagian dari kurikulum kewirausahaan kami.',
+    vision: 'Menjadi program kuliner sekolah terbaik yang menghasilkan lulusan terampil, kreatif, dan berjiwa wirausaha, serta menyajikan produk makanan dan minuman yang unggul.',
+    mission: `Memberikan pelatihan praktis berbasis standar industri.
+Mengembangkan resep orisinal dengan bahan lokal berkualitas.
+Membentuk mental wirausaha yang jujur dan profesional.
+Menghadirkan produk kuliner yang digemari oleh masyarakat Maron dan sekitarnya.`,
+    testimonial1_text: 'Produknya selalu fresh dan higienis. Rasa kuenya luar biasa, manisnya pas dan krimnya lembut. Sangat recommended!',
+    testimonial1_author: 'Maya, Alumni SMAN 1 Maron',
+    testimonial2_text: 'Saya suka banget onde-ondenya, renyah di luar dan isinya kacang hijau yang manis. Selalu beli kalau ada bazar di sekolah!',
+    testimonial2_author: 'Budi, Guru SMAN 1 Maron',
+    testimonial3_text: 'Pelayanannya ramah dan cepat. Es Buah Segarnya sangat menyegarkan. Sukses terus untuk Cita Rasa MARON!',
+    testimonial3_author: 'Ibu Siti, Wali Murid',
+    whatsapp_number: '+62 812-3456-789',
+    whatsapp_custom_link: '',
+    instagram_handle: '@citarasamaron',
+    instagram_custom_link: '',
+    email_address: 'kontak@citarasamaron.com',
+    email_custom_link: '',
+    school_address: 'SMAN 1 Maron\\n Jl. Pendidikan No. 123, Maron\\n Kabupaten Probolinggo, Jawa Timur',
+    footer_text: '© 2023 Cita Rasa MARON. All Rights Reserved.',
+    // Colors
+    bg_color: '#FFFFFF',
+    surface_color: '#FFFFFF',
+    text_color: '#2C3E50',
+    primary_color: '#1E88E5',
+    secondary_color: '#43A047',
+    font_size: '16',
+    // Images
+    hero_img: '',
+    featured_img_1: '',
+    featured_img_2: '',
+    featured_img_3: '',
+    gallery_img_1: '',
+    gallery_img_2: '',
+    gallery_img_3: '',
+    gallery_img_4: '',
+    location_map_img: '',
+    social_icon_wa: '',
+    social_icon_ig: '',
+    social_icon_email: '',
+    product_img_strawberry_cake: '',
+    product_img_pudding_coklat: '',
+    product_img_roti_coklat: '',
+    product_img_tiramisu_cake: '',
+    product_img_es_buah: '',
+    product_img_klepon: '',
+    product_img_jus_alpukat: '',
+    product_img_onde_onde: '',
+};
+
+// Product Data (Static for now, but configured via Admin Panel)
+const productData = {
+    'strawberry-cake': { name: 'Strawberry Cake', price: 'Rp 25.000', icon: '🍰', category: 'cake',
+        description: 'Cake lembut dengan lapisan krim strawberry segar. Dibuat dengan bahan-bahan pilihan berkualitas tinggi dan diproduksi oleh siswa-siswi terampil Program Tata Boga SMAN 1 Maron. Cocok untuk acara ulang tahun atau perayaan spesial Anda.',
+        ingredients: ['Tepung terigu premium', 'Telur segar', 'Gula pasir', 'Mentega', 'Krim strawberry segar', 'Topping buah strawberry']
+    },
+    'pudding-coklat': { name: 'Pudding Coklat', price: 'Rp 8.000', icon: '🍮', category: 'jajanan',
+        description: 'Pudding lembut dengan topping coklat yang manis. Tekstur lembut dan rasa coklat yang kaya membuat pudding ini menjadi favorit. Cocok untuk camilan atau dessert setelah makan.',
+        ingredients: ['Susu segar', 'Agar-agar', 'Coklat bubuk premium', 'Gula', 'Topping coklat chip']
+    },
+    'roti-coklat': { name: 'Roti Manis Coklat', price: 'Rp 5.000', icon: '🥐', category: 'roti',
+        description: 'Roti manis lembut dengan isian coklat yang lumer di mulut. Dibuat fresh setiap hari dengan bahan-bahan berkualitas. Sempurna untuk sarapan atau bekal sekolah.',
+        ingredients: ['Tepung terigu', 'Ragi', 'Gula', 'Susu', 'Coklat filling', 'Mentega']
+    },
+    'tiramisu-cake': { name: 'Tiramisu Cake', price: 'Rp 18.000', icon: '🎂', category: 'cake',
+        description: 'Cake Italia klasik dengan perpaduan kopi dan mascarpone yang sempurna. Lapisan sponge cake yang lembut direndam dengan espresso dan dilapisi krim mascarpone yang creamy.',
+        ingredients: ['Ladyfinger biscuits', 'Espresso', 'Mascarpone cheese', 'Telur', 'Gula', 'Cocoa powder']
+    },
+    'es-buah': { name: 'Es Buah Segar', price: 'Rp 10.000', icon: '🍹', category: 'minuman',
+        description: 'Campuran berbagai macam buah segar seperti melon, semangka, anggur, dan jelly, disajikan dengan kuah manis dan es. Menyegarkan dan sehat.',
+        ingredients: ['Buah-buahan segar (melon, semangka, anggur, dll)', 'Susu kental manis', 'Sirup gula', 'Es batu']
+    },
+    'klepon': { name: 'Klepon', price: 'Rp 3.000', icon: '🟢', category: 'jajanan',
+        description: 'Jajanan tradisional berupa bola-bola ketan berisi gula merah cair, ditaburi parutan kelapa. Sensasi meletus di mulut yang khas.',
+        ingredients: ['Tepung ketan', 'Gula merah', 'Air perasan daun suji (pewarna alami)', 'Kelapa parut']
+    },
+    'jus-alpukat': { name: 'Jus Alpukat', price: 'Rp 12.000', icon: '🥑', category: 'minuman',
+        description: 'Jus dari alpukat pilihan yang kental dan creamy, disajikan dengan sedikit susu dan lelehan coklat. Pilihan minuman yang mengenyangkan.',
+        ingredients: ['Alpukat segar', 'Susu segar', 'Gula aren', 'Es batu', 'Coklat chips (opsional)']
+    },
+    'onde-onde': { name: 'Onde-Onde', price: 'Rp 5.000', icon: '🔴', category: 'jajanan',
+        description: 'Kue tradisional berlapis wijen dengan isian kacang hijau yang manis. Digoreng hingga renyah di luar dan lembut di dalam. Camilan klasik yang tak lekang waktu.',
+        ingredients: ['Tepung ketan', 'Kacang hijau', 'Gula pasir', 'Wijen', 'Minyak goreng']
+    }
+};
+
+let currentPage = 'home';
+
+// Admin Functions
+function loadAdminFields(config) {
+    document.getElementById('admin-site-title').value = config.site_title || defaultConfig.site_title;
+    document.getElementById('admin-hero-title').value = config.hero_title || defaultConfig.hero_title;
+    document.getElementById('admin-hero-subtitle').value = config.hero_subtitle || defaultConfig.hero_subtitle;
+    document.getElementById('admin-cta-primary').value = config.cta_primary || defaultConfig.cta_primary;
+    document.getElementById('admin-cta-secondary').value = config.cta_secondary || defaultConfig.cta_secondary;
+
+    document.getElementById('admin-whatsapp').value = config.whatsapp_number || defaultConfig.whatsapp_number;
+    document.getElementById('admin-whatsapp-link').value = config.whatsapp_custom_link || defaultConfig.whatsapp_custom_link;
+    document.getElementById('admin-instagram').value = config.instagram_handle || defaultConfig.instagram_handle;
+    document.getElementById('admin-instagram-link').value = config.instagram_custom_link || defaultConfig.instagram_custom_link;
+    document.getElementById('admin-email').value = config.email_address || defaultConfig.email_address;
+    document.getElementById('admin-email-link').value = config.email_custom_link || defaultConfig.email_custom_link;
+    document.getElementById('admin-address').value = config.school_address || defaultConfig.school_address;
+    document.getElementById('admin-footer').value = config.footer_text || defaultConfig.footer_text;
+
+    document.getElementById('admin-about-desc').value = config.about_description || defaultConfig.about_description;
+    document.getElementById('admin-vision').value = config.vision || defaultConfig.vision;
+    document.getElementById('admin-mission').value = config.mission || defaultConfig.mission;
+
+    document.getElementById('admin-testimonial1-text').value = config.testimonial1_text || defaultConfig.testimonial1_text;
+    document.getElementById('admin-testimonial1-author').value = config.testimonial1-author || defaultConfig.testimonial1_author;
+    document.getElementById('admin-testimonial2-text').value = config.testimonial2_text || defaultConfig.testimonial2_text;
+    document.getElementById('admin-testimonial2-author').value = config.testimonial2_author || defaultConfig.testimonial2_author;
+    document.getElementById('admin-testimonial3-text').value = config.testimonial3_text || defaultConfig.testimonial3_text;
+    document.getElementById('admin-testimonial3-author').value = config.testimonial3_author || defaultConfig.testimonial3_author;
+    
+    // Color inputs
+    document.getElementById('admin-bg-color').value = config.bg_color || defaultConfig.bg_color;
+    document.getElementById('admin-surface-color').value = config.surface_color || defaultConfig.surface_color;
+    document.getElementById('admin-text-color').value = config.text_color || defaultConfig.text_color;
+    document.getElementById('admin-primary-color').value = config.primary_color || defaultConfig.primary_color;
+    document.getElementById('admin-secondary-color').value = config.secondary_color || defaultConfig.secondary_color;
+    document.getElementById('admin-font-size').value = config.font_size || defaultConfig.font_size;
+
+
+    // Update previews (Image handling simplified for this output)
+    updateHeroImagePreview(config.hero_img || defaultConfig.hero_img);
+    updateGalleryPreview(1, config.gallery_img_1 || defaultConfig.gallery_img_1);
+    updateGalleryPreview(2, config.gallery_img_2 || defaultConfig.gallery_img_2);
+    updateGalleryPreview(3, config.gallery_img_3 || defaultConfig.gallery_img_3);
+    updateGalleryPreview(4, config.gallery_img_4 || defaultConfig.gallery_img_4);
+    
+    // Product image previews
+    ['strawberry-cake', 'pudding-coklat', 'roti-coklat', 'tiramisu-cake', 'es-buah', 'klepon', 'jus-alpukat', 'onde-onde'].forEach(id => {
+        const key = `product_img_${id.replace('-', '_')}`;
+        updateProductImagePreview(id, config[key] || defaultConfig[key]);
+    });
+
+    // Featured image previews
+    [1, 2, 3].forEach(num => {
+        const key = `featured_img_${num}`;
+        updateFeaturedImagePreview(num, config[key] || defaultConfig[key]);
+    });
+
+    // Social Icon previews
+    ['wa', 'ig', 'email'].forEach(socialType => {
+        const key = `social_icon_${socialType}`;
+        updateSocialIconPreview(socialType, config[key] || defaultConfig[key]);
+    });
+
+    // Location Map Preview
+    updateLocationMapPreview(config.location_map_img || defaultConfig.location_map_img);
+}
+
+function updateHeroImagePreview(imageUrl) {
+    const preview = document.getElementById('hero-image-preview');
+    const removeBtn = document.getElementById('remove-hero-image');
+    if (imageUrl && imageUrl.trim() !== '') {
+        preview.innerHTML = `<img src="${imageUrl}" alt="Hero Image" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;"
+        onerror="this.style.display='none'; this.parentElement.innerHTML='❌ Gambar gagal dimuat'; this.parentElement.style.fontSize='2rem';">`;
+        removeBtn.style.display = 'inline-block';
+    } else {
+        preview.innerHTML = '🎂';
+        preview.style.fontSize = '4rem';
+        removeBtn.style.display = 'none';
+    }
+}
+
+function updateGalleryPreview(galleryNum, imageUrl) {
+    const preview = document.getElementById(`gallery${galleryNum}-preview`);
+    const removeBtn = document.querySelector(`.gallery-remove-btn[data-gallery="${galleryNum}"]`);
+    const defaultEmojis = ['👨‍🍳', '🍰', '📚', '🏆'];
+    if (imageUrl && imageUrl.trim() !== '') {
+        preview.innerHTML = `<img src="${imageUrl}" alt="Gallery Image ${galleryNum}" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;" onerror="this.style.display='none'; this.parentElement.innerHTML='❌ Gambar gagal dimuat'; this.parentElement.style.fontSize='2rem';">`;
+        removeBtn.style.display = 'inline-block';
+    } else {
+        preview.innerHTML = defaultEmojis[galleryNum - 1] || '🖼️';
+        preview.style.fontSize = '2rem';
+        removeBtn.style.display = 'none';
+    }
+}
+
+function updateProductImagePreview(productId, imageUrl) {
+    const preview = document.getElementById(`product-preview-${productId}`);
+    const removeBtn = document.querySelector(`.product-remove-btn[data-product="${productId}"]`);
+    const product = productData[productId];
+    if (product) {
+        if (imageUrl && imageUrl.trim() !== '') {
+            preview.innerHTML = `<img src="${imageUrl}" alt="${product.name}" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;" onerror="this.style.display='none'; this.parentElement.innerHTML='❌ Gambar gagal dimuat'; this.parentElement.style.fontSize='2rem';">`;
+            removeBtn.style.display = 'inline-block';
+        } else {
+            preview.innerHTML = product.icon;
+            preview.style.fontSize = '3rem';
+            removeBtn.style.display = 'none';
+        }
+    }
+}
+
+function updateFeaturedImagePreview(featuredNum, imageUrl) {
+    // This function can be the same as updateProductImagePreview if we map featured to product IDs
+    // For simplicity and based on the default data:
+    const featuredProductIds = ['strawberry-cake', 'pudding-coklat', 'roti-coklat'];
+    const productId = featuredProductIds[featuredNum - 1];
+    updateProductImagePreview(productId, imageUrl);
+}
+
+function updateSocialIconPreview(socialType, imageUrl) {
+    const preview = document.getElementById(`social-preview-${socialType}`);
+    const removeBtn = document.querySelector(`.social-remove-btn[data-social="${socialType}"]`);
+    const defaultEmojis = { wa: '📱', ig: '📸', email: '📧' };
+    if (imageUrl && imageUrl.trim() !== '') {
+        preview.innerHTML = `<img src="${imageUrl}" alt="${socialType} Icon" style="width: 32px; height: 32px; object-fit: cover; border-radius: 4px;" onerror="this.style.display='none'; this.parentElement.innerHTML='❌'; this.parentElement.style.fontSize='1rem';">`;
+        removeBtn.style.display = 'inline-block';
+    } else {
+        preview.innerHTML = defaultEmojis[socialType] || '';
+        preview.style.fontSize = '2rem';
+        removeBtn.style.display = 'none';
+    }
+}
+
+function updateLocationMapPreview(imageUrl) {
+    const preview = document.getElementById('location-map-preview');
+    const removeBtn = document.getElementById('remove-location-map');
+    if (imageUrl && imageUrl.trim() !== '') {
+        preview.innerHTML = `<img src="${imageUrl}" alt="Location Map" style="width: 100%; height: 100%; object-fit: cover; border-radius: 12px;" onerror="this.style.display='none'; this.parentElement.innerHTML='❌ Gambar gagal dimuat'; this.parentElement.style.fontSize='4rem';">`;
+        removeBtn.style.display = 'inline-block';
+    } else {
+        preview.innerHTML = '🗺️';
+        preview.style.fontSize = '4rem';
+        removeBtn.style.display = 'none';
+    }
+}
+
+
+// UI Update Logic
+function updateUI(config) {
+    // Update general styles
+    const styleSheet = document.styleSheets[0];
+    const primaryColor = config.primary_color || defaultConfig.primary_color;
+    const secondaryColor = config.secondary_color || defaultConfig.secondary_color;
+    const textColor = config.text_color || defaultConfig.text_color;
+    const bgColor = config.bg_color || defaultConfig.bg_color;
+    const surfaceColor = config.surface_color || defaultConfig.surface_color;
+    const fontSize = config.font_size || defaultConfig.font_size;
+    
+    // Apply global styles (simplified for a single file)
+    document.body.style.backgroundColor = bgColor;
+    document.body.style.color = textColor;
+    document.body.style.fontSize = `${fontSize}px`;
+    
+    // Update color variables or style blocks (This requires more complex CSS manipulation which is simplified here)
+    // For basic example, we manually override some elements
+    document.querySelector('.logo').style.color = primaryColor;
+    document.querySelector('.nav-links .btn-order').style.backgroundColor = secondaryColor;
+    document.querySelector('.nav-links a:not(.btn-order)::after').style.backgroundColor = primaryColor;
+    document.querySelector('.hero-text h1').style.color = primaryColor;
+    document.querySelector('.btn-primary').style.backgroundColor = primaryColor;
+    document.querySelector('.btn-secondary').style.backgroundColor = secondaryColor;
+    document.querySelector('.product-price').style.color = primaryColor;
+    document.querySelector('.about-box h2').style.color = primaryColor;
+    document.querySelector('.testimonial-author').style.color = primaryColor;
+    document.querySelector('.footer-section h3').style.color = primaryColor;
+    document.querySelector('.btn-submit').style.backgroundColor = secondaryColor;
+    document.querySelector('.contact-box a').style.color = secondaryColor;
+
+    // Update surface colors
+    document.querySelectorAll('.highlight-card, .product-card, .about, .testimonial-card, .contact-form, .about-box, .admin-card').forEach(el => {
+        el.style.backgroundColor = surfaceColor;
+    });
+
+    const composition = document.querySelector('.composition');
+    if (composition) {
+        composition.style.backgroundColor = bgColor;
+    }
+
+    // Update text content
+    document.getElementById('site-title').textContent = config.site_title || defaultConfig.site_title;
+    document.getElementById('hero-title').textContent = config.hero_title || defaultConfig.hero_title;
+    document.getElementById('hero-subtitle').textContent = config.hero_subtitle || defaultConfig.hero_subtitle;
+    document.getElementById('cta-primary').textContent = config.cta_primary || defaultConfig.cta_primary;
+    document.getElementById('cta-secondary').textContent = config.cta_secondary || defaultConfig.cta_secondary;
+    document.getElementById('footer-text').textContent = config.footer_text || defaultConfig.footer_text;
+    
+    // Update about section
+    const aboutSection = document.querySelector('.about p');
+    if (aboutSection) {
+        aboutSection.textContent = config.about_description || defaultConfig.about_description;
+    }
+    
+    // Update testimonials
+    const testimonials = document.querySelectorAll('.testimonial-card');
+    if (testimonials[0]) {
+        testimonials[0].querySelector('p').textContent = config.testimonial1_text || defaultConfig.testimonial1_text;
+        testimonials[0].querySelector('.testimonial-author').textContent = config.testimonial1_author || defaultConfig.testimonial1_author;
+    }
+    if (testimonials[1]) {
+        testimonials[1].querySelector('p').textContent = config.testimonial2_text || defaultConfig.testimonial2_text;
+        testimonials[1].querySelector('.testimonial-author').textContent = config.testimonial2_author || defaultConfig.testimonial2_author;
+    }
+    if (testimonials[2]) {
+        testimonials[2].querySelector('p').textContent = config.testimonial3_text || defaultConfig.testimonial3_text;
+        testimonials[2].querySelector('.testimonial-author').textContent = config.testimonial3_author || defaultConfig.testimonial3_author;
+    }
+
+    // Update Contact/Footer Info
+    const waNum = config.whatsapp_number || defaultConfig.whatsapp_number;
+    const igHandle = config.instagram_handle || defaultConfig.instagram_handle;
+    const emailAddr = config.email_address || defaultConfig.email_address;
+    const schoolAddr = (config.school_address || defaultConfig.school_address).replace(/\\n/g, '<br>');
+
+    document.getElementById('contact-whatsapp').textContent = waNum;
+    document.getElementById('contact-whatsapp').href = config.whatsapp_custom_link || `https://wa.me/${waNum.replace(/\D/g,'')}`;
+    document.getElementById('footer-social-wa').href = config.whatsapp_custom_link || `https://wa.me/${waNum.replace(/\D/g,'')}`;
+    document.getElementById('footer-whatsapp-text').textContent = `WhatsApp: ${waNum}`;
+
+    document.getElementById('contact-instagram').textContent = igHandle;
+    document.getElementById('contact-instagram').href = config.instagram_custom_link || `https://instagram.com/${igHandle.replace('@', '')}`;
+    document.getElementById('footer-social-ig').href = config.instagram_custom_link || `https://instagram.com/${igHandle.replace('@', '')}`;
+    document.getElementById('footer-instagram-text').textContent = `Instagram: ${igHandle}`;
+
+    document.getElementById('footer-social-email').href = config.email_custom_link || `mailto:${emailAddr}`;
+    document.getElementById('footer-email-text').textContent = `Email: ${emailAddr}`;
+
+    document.getElementById('school-location').innerHTML = schoolAddr;
+    document.getElementById('footer-address').innerHTML = schoolAddr;
+    
+    // Update about page
+    document.getElementById('about-vision').textContent = config.vision || defaultConfig.vision;
+    document.getElementById('about-mission').innerHTML = (config.mission || defaultConfig.mission).split('\\n').map(item => `<li>${item.trim()}</li>`).join('');
+
+
+    // Update hero image
+    const heroImageDiv = document.querySelector('.hero-image .food-icon');
+    const heroImageUrl = config.hero_img || defaultConfig.hero_img;
+    if (heroImageUrl && heroImageUrl.trim() !== '') {
+        heroImageDiv.style.fontSize = '0';
+        heroImageDiv.innerHTML = `<img src="${heroImageUrl}" alt="Hero Image" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;" onerror="this.style.display='none'; this.parentElement.style.fontSize='8rem'; this.parentElement.innerHTML='🎂';">`;
+    } else {
+        heroImageDiv.style.fontSize = '8rem';
+        heroImageDiv.textContent = '🎂';
+    }
+
+    // Update featured products on homepage
+    const featuredProducts = document.querySelectorAll('#home-page .product-grid .product-card');
+    const featuredImages = [
+        config.featured_img_1 || defaultConfig.featured_img_1,
+        config.featured_img_2 || defaultConfig.featured_img_2,
+        config.featured_img_3 || defaultConfig.featured_img_3
+    ];
+    const featuredProductIds = ['strawberry-cake', 'pudding-coklat', 'roti-coklat'];
+
+    featuredProducts.forEach((card, index) => {
+        const productImageDiv = card.querySelector('.product-image');
+        const imageUrl = featuredImages[index];
+        const productId = featuredProductIds[index];
+        const product = productData[productId];
+
+        if (imageUrl && imageUrl.trim() !== '' && product) {
+            productImageDiv.style.fontSize = '0';
+            productImageDiv.innerHTML = `<img src="${imageUrl}" alt="${product.name}" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.style.display='none'; this.parentElement.style.fontSize='4rem'; this.parentElement.innerHTML='${product.icon}';">`;
+        } else if (product) {
+            productImageDiv.style.fontSize = '4rem';
+            productImageDiv.textContent = product.icon;
+        }
+        
+        // Update product name and price for featured
+        card.querySelector('.product-name').textContent = product.name;
+        card.querySelector('.product-price').textContent = product.price;
+        card.querySelector('.product-info p').textContent = product.description.split('. ')[0] + '.'; // Use first sentence as short desc
+    });
+    
+    // Update product images
+    const productImages = {
+        'strawberry-cake': config.product_img_strawberry_cake || defaultConfig.product_img_strawberry_cake,
+        'pudding-coklat': config.product_img_pudding_coklat || defaultConfig.product_img_pudding_coklat,
+        'roti-coklat': config.product_img_roti_coklat || defaultConfig.product_img_roti_coklat,
+        'tiramisu-cake': config.product_img_tiramisu_cake || defaultConfig.product_img_tiramisu_cake,
+        'es-buah': config.product_img_es_buah || defaultConfig.product_img_es_buah,
+        'klepon': config.product_img_klepon || defaultConfig.product_img_klepon,
+        'jus-alpukat': config.product_img_jus_alpukat || defaultConfig.product_img_jus_alpukat,
+        'onde-onde': config.product_img_onde_onde || defaultConfig.product_img_onde_onde,
+    };
+    
+    // Update gallery images
+    const galleryImages = [
+        config.gallery_img_1 || defaultConfig.gallery_img_1,
+        config.gallery_img_2 || defaultConfig.gallery_img_2,
+        config.gallery_img_3 || defaultConfig.gallery_img_3,
+        config.gallery_img_4 || defaultConfig.gallery_img_4
+    ];
+    const galleryDivs = document.querySelectorAll('.about-gallery .gallery-item');
+    const defaultGalleryEmojis = ['👨‍🍳', '🍰', '📚', '🏆'];
+    
+    galleryDivs.forEach((div, index) => {
+        const imageUrl = galleryImages[index];
+        if (imageUrl && imageUrl.trim() !== '') {
+            div.style.fontSize = '0';
+            div.innerHTML = `<img src="${imageUrl}" alt="Gallery Image ${index + 1}" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.style.display='none'; this.parentElement.style.fontSize='5rem'; this.parentElement.innerHTML='${defaultGalleryEmojis[index]}';">`;
+        } else {
+            div.style.fontSize = '5rem';
+            div.textContent = defaultGalleryEmojis[index];
+        }
+    });
+
+    // Re-render all products on products page
+    renderProducts(productImages, config);
+    
+    // Update social icons on footer and contact page
+    const socialIconMap = {
+        wa: { selector: '#footer-social-wa', default: '📱', key: 'social_icon_wa' },
+        ig: { selector: '#footer-social-ig', default: '📸', key: 'social_icon_ig' },
+        email: { selector: '#footer-social-email', default: '📧', key: 'social_icon_email' }
+    };
+
+    for (const type in socialIconMap) {
+        const element = document.querySelector(socialIconMap[type].selector);
+        const imageUrl = config[socialIconMap[type].key] || defaultConfig[socialIconMap[type].key];
+        if (element) {
+            if (imageUrl && imageUrl.trim() !== '') {
+                element.style.fontSize = '0';
+                element.innerHTML = `<img src="${imageUrl}" alt="${type} Icon" style="width: 1.5rem; height: 1.5rem; object-fit: contain; vertical-align: middle;" onerror="this.style.display='none'; this.parentElement.style.fontSize='1.5rem'; this.parentElement.innerHTML='${socialIconMap[type].default}';">`;
+            } else {
+                element.style.fontSize = '1.5rem';
+                element.textContent = socialIconMap[type].default;
+            }
+        }
+    }
+
+    // Update location map placeholder
+    const locationMapDiv = document.getElementById('location-map-preview');
+    const locationMapUrl = config.location_map_img || defaultConfig.location_map_img;
+    if (locationMapUrl && locationMapUrl.trim() !== '') {
+        locationMapDiv.style.fontSize = '0';
+        locationMapDiv.innerHTML = `<img src="${locationMapUrl}" alt="Location Map" style="width: 100%; height: 100%; object-fit: cover; border-radius: 12px;" onerror="this.style.display='none'; this.parentElement.style.fontSize='4rem'; this.parentElement.innerHTML='🗺️';">`;
+    } else {
+        locationMapDiv.style.fontSize = '4rem';
+        locationMapDiv.textContent = '🗺️';
+    }
+}
+
+// Function to render all products on the products page
+function renderProducts(productImages, config) {
+    const grid = document.getElementById('all-products-grid');
+    grid.innerHTML = '';
+    
+    for (const id in productData) {
+        const product = productData[id];
+        const imageUrl = productImages[id];
+        
+        const productCard = document.createElement('div');
+        productCard.className = 'product-card';
+        productCard.setAttribute('data-product', id);
+        productCard.setAttribute('data-category', product.category);
+
+        let imageHtml = '';
+        if (imageUrl && imageUrl.trim() !== '') {
+            imageHtml = `<img src="${imageUrl}" alt="${product.name}" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.style.display='none'; this.parentElement.style.fontSize='4rem'; this.parentElement.innerHTML='${product.icon}';">`;
+        } else {
+            imageHtml = product.icon;
+        }
+
+        productCard.innerHTML = `
+            <div class="product-image" id="product-preview-${id}" style="font-size: ${imageUrl ? '0' : '4rem'}">${imageHtml}</div>
+            <div class="product-info">
+                <h3 class="product-name">${product.name}</h3>
+                <p>${product.description.split('. ')[0] + '.'}</p>
+                <div class="product-price">${product.price}</div>
+                <button class="btn btn-secondary btn-buy">Pesan</button>
+            </div>
+        `;
+        
+        // Add click listener for detail page
+        productCard.addEventListener('click', (e) => {
+            if (e.target.tagName !== 'BUTTON') {
+                showProductDetail(id, productImages, config);
+            }
+        });
+
+        grid.appendChild(productCard);
+    }
+    
+    // Re-attach filter logic
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+        btn.onclick = () => filterProducts(btn.getAttribute('data-filter'));
+    });
+}
+
+function filterProducts(category) {
+    document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+    document.querySelector(`.filter-btn[data-filter="${category}"]`).classList.add('active');
+    
+    document.querySelectorAll('#all-products-grid .product-card').forEach(card => {
+        if (category === 'all' || card.getAttribute('data-category') === category) {
+            card.style.display = 'block';
+        } else {
+            card.style.display = 'none';
+        }
+    });
+}
+
+function showProductDetail(productId, productImages, config) {
+    const product = productData[productId];
+    if (!product) return;
+    
+    document.getElementById('detail-name').textContent = product.name;
+    document.getElementById('detail-price').textContent = product.price;
+    document.getElementById('detail-description').textContent = product.description;
+    
+    const ingredientsList = document.getElementById('detail-ingredients');
+    ingredientsList.innerHTML = product.ingredients.map(i => `<li>${i}</li>`).join('');
+    
+    const imageUrl = productImages[productId];
+    const detailImageDiv = document.getElementById('detail-image');
+    if (imageUrl && imageUrl.trim() !== '') {
+        detailImageDiv.style.fontSize = '0';
+        detailImageDiv.innerHTML = `<img src="${imageUrl}" alt="${product.name}" style="width: 100%; height: 100%; object-fit: cover; border-radius: 12px;" onerror="this.style.display='none'; this.parentElement.style.fontSize='10rem'; this.parentElement.innerHTML='${product.icon}';">`;
+    } else {
+        detailImageDiv.style.fontSize = '10rem';
+        detailImageDiv.textContent = product.icon;
+    }
+    
+    const waNum = config.whatsapp_number || defaultConfig.whatsapp_number;
+    const message = `Halo, saya ingin memesan produk: *${product.name}* (Harga: ${product.price}).`;
+    const whatsappUrl = `https://wa.me/${waNum.replace(/\D/g,'')}?text=${encodeURIComponent(message)}`;
+    document.getElementById('detail-order-btn').href = whatsappUrl;
+
+    navigateToPage('detail');
+}
+
+// Initial Product Render (Dummy call, will be updated by elementSdk.onConfigChange)
+const initialImages = {};
+for (const id in productData) {
+    const key = `product_img_${id.replace('-', '_')}`;
+    initialImages[id] = defaultConfig[key];
+}
+renderProducts(initialImages, defaultConfig);
+
+
+// =======================================================
+// ELEMENT SDK/PLATFORM INTEGRATION
+// =======================================================
+
+function onConfigChange(newConfig) {
+    // This function will be called by the hosting platform (elementSdk)
+    updateUI(newConfig);
+}
+
+function mapToCapabilities(config) {
+    // Map of config keys to capability setters/getters
+    return {
+        // Text Fields
+        site_title: {
+            get: () => config.site_title || defaultConfig.site_title,
+            set: (value) => { config.site_title = value; if (window.elementSdk) { window.elementSdk.setConfig({ site_title: value }); } }
+        },
+        hero_title: {
+            get: () => config.hero_title || defaultConfig.hero_title,
+            set: (value) => { config.hero_title = value; if (window.elementSdk) { window.elementSdk.setConfig({ hero_title: value }); } }
+        },
+        hero_subtitle: {
+            get: () => config.hero_subtitle || defaultConfig.hero_subtitle,
+            set: (value) => { config.hero_subtitle = value; if (window.elementSdk) { window.elementSdk.setConfig({ hero_subtitle: value }); } }
+        },
+        cta_primary: {
+            get: () => config.cta_primary || defaultConfig.cta_primary,
+            set: (value) => { config.cta_primary = value; if (window.elementSdk) { window.elementSdk.setConfig({ cta_primary: value }); } }
+        },
+        cta_secondary: {
+            get: () => config.cta_secondary || defaultConfig.cta_secondary,
+            set: (value) => { config.cta_secondary = value; if (window.elementSdk) { window.elementSdk.setConfig({ cta_secondary: value }); } }
+        },
+        whatsapp_number: {
+            get: () => config.whatsapp_number || defaultConfig.whatsapp_number,
+            set: (value) => { config.whatsapp_number = value; if (window.elementSdk) { window.elementSdk.setConfig({ whatsapp_number: value }); } }
+        },
+        instagram_handle: {
+            get: () => config.instagram_handle || defaultConfig.instagram_handle,
+            set: (value) => { config.instagram_handle = value; if (window.elementSdk) { window.elementSdk.setConfig({ instagram_handle: value }); } }
+        },
+        school_address: {
+            get: () => config.school_address || defaultConfig.school_address,
+            set: (value) => { config.school_address = value; if (window.elementSdk) { window.elementSdk.setConfig({ school_address: value }); } }
+        },
+        footer_text: {
+            get: () => config.footer_text || defaultConfig.footer_text,
+            set: (value) => { config.footer_text = value; if (window.elementSdk) { window.elementSdk.setConfig({ footer_text: value }); } }
+        },
+        // Color Fields
+        bg_color: {
+            get: () => config.bg_color || defaultConfig.bg_color,
+            set: (value) => { config.bg_color = value; if (window.elementSdk) { window.elementSdk.setConfig({ bg_color: value }); } }
+        },
+        surface_color: {
+            get: () => config.surface_color || defaultConfig.surface_color,
+            set: (value) => { config.surface_color = value; if (window.elementSdk) { window.elementSdk.setConfig({ surface_color: value }); } }
+        },
+        text_color: {
+            get: () => config.text_color || defaultConfig.text_color,
+            set: (value) => { config.text_color = value; if (window.elementSdk) { window.elementSdk.setConfig({ text_color: value }); } }
+        },
+        primary_color: {
+            get: () => config.primary_color || defaultConfig.primary_color,
+            set: (value) => { config.primary_color = value; if (window.elementSdk) { window.elementSdk.setConfig({ primary_color: value }); } }
+        },
+        secondary_color: {
+            get: () => config.secondary_color || defaultConfig.secondary_color,
+            set: (value) => { config.secondary_color = value; if (window.elementSdk) { window.elementSdk.setConfig({ secondary_color: value }); } }
+        },
+        font_size: {
+            get: () => config.font_size || defaultConfig.font_size,
+            set: (value) => { config.font_size = value; if (window.elementSdk) { window.elementSdk.setConfig({ font_size: value }); } }
+        }
+        // ... include all other configurable fields
+    };
+}
+
+function mapToEditPanelValues(config) {
+    // Return a Map containing all config keys that should be reflected in the edit panel
+    return new Map([
+        ['site_title', config.site_title || defaultConfig.site_title],
+        ['hero_title', config.hero_title || defaultConfig.hero_title],
+        ['hero_subtitle', config.hero_subtitle || defaultConfig.hero_subtitle],
+        ['cta_primary', config.cta_primary || defaultConfig.cta_primary],
+        ['cta_secondary', config.cta_secondary || defaultConfig.cta_secondary],
+        ['whatsapp_number', config.whatsapp_number || defaultConfig.whatsapp_number],
+        ['instagram_handle', config.instagram_handle || defaultConfig.instagram_handle],
+        ['school_address', config.school_address || defaultConfig.school_address],
+        ['footer_text', config.footer_text || defaultConfig.footer_text]
+        // ... include all other fields
+    ]);
+}
+
+if (window.elementSdk) {
+    window.elementSdk.init({ defaultConfig, onConfigChange, mapToCapabilities, mapToEditPanelValues });
+}
+
+// Page navigation function
+function navigateToPage(pageName) {
+    document.querySelectorAll('.page').forEach(page => {
+        page.classList.remove('active');
+    });
+    document.getElementById(`${pageName}-page`).classList.add('active');
+    currentPage = pageName;
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+// Navigation click handlers
+document.querySelectorAll('[data-page]').forEach(element => {
+    element.addEventListener('click', (e) => {
+        e.preventDefault();
+        const page = element.getAttribute('data-page');
+        navigateToPage(page);
+    });
+});
+
+// Product card click handlers
+document.querySelectorAll('.product-card').forEach(card => {
+    card.addEventListener('click', (e) => {
+        if (e.target.tagName !== 'BUTTON') {
+            const productId = card.getAttribute('data-product');
+            const product = productData[productId];
+            if (product) {
+                const detailIcon = document.getElementById('detail-icon');
+                const config = window.elementSdk ? window.elementSdk.getLatestConfig() : defaultConfig;
+                const productImages = getProductImages(config);
+                showProductDetail(productId, productImages, config);
+            }
+        }
+    });
+});
+
+// Order button click handler (for homepage featured products)
+document.querySelectorAll('.btn-buy').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        const card = e.target.closest('.product-card');
+        const productId = card.getAttribute('data-product');
+        const product = productData[productId];
+        if (product) {
+            const config = window.elementSdk ? window.elementSdk.getLatestConfig() : defaultConfig;
+            const waNum = config.whatsapp_number || defaultConfig.whatsapp_number;
+            const message = `Halo, saya ingin memesan produk: *${product.name}* (Harga: ${product.price}).`;
+            const whatsappUrl = `https://wa.me/${waNum.replace(/\D/g,'')}?text=${encodeURIComponent(message)}`;
+            window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
+        }
+    });
+});
+
+// Navigation 'Pesan Sekarang' button
+document.getElementById('nav-order-btn').addEventListener('click', (e) => {
+    e.preventDefault();
+    const config = window.elementSdk ? window.elementSdk.getLatestConfig() : defaultConfig;
+    const waNum = config.whatsapp_number || defaultConfig.whatsapp_number;
+    const message = `Halo, saya ingin memesan produk.`;
+    const whatsappUrl = `https://wa.me/${waNum.replace(/\D/g,'')}?text=${encodeURIComponent(message)}`;
+    window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
+});
+
+// Contact form
+document.getElementById('contact-form').addEventListener('submit', (e) => {
+    e.preventDefault();
+    const successMsg = document.getElementById('success-message');
+    successMsg.classList.add('show');
+    e.target.reset();
+    setTimeout(() => {
+        successMsg.classList.remove('show');
+    }, 5000);
+});
+
+// Toggle Password Visibility
+document.getElementById('toggle-password').addEventListener('click', () => {
+    const passwordInput = document.getElementById('admin-password');
+    const toggleBtn = document.getElementById('toggle-password');
+    if (passwordInput.type === 'password') {
+        passwordInput.type = 'text';
+        toggleBtn.textContent = '🙈';
+        toggleBtn.style.opacity = '1';
+    } else {
+        passwordInput.type = 'password';
+        toggleBtn.textContent = '👁️';
+        toggleBtn.style.opacity = '0.6';
+    }
+});
+
+// Admin Button Click
+document.getElementById('admin-btn').addEventListener('click', () => {
+    document.getElementById('admin-login-modal').classList.add('show');
+    document.getElementById('admin-password').value = '';
+    document.getElementById('admin-password').type = 'password';
+    document.getElementById('toggle-password').textContent = '👁️';
+    document.getElementById('toggle-password').style.opacity = '0.6';
+    document.getElementById('login-error').classList.remove('show');
+});
+
+// Cancel Login
+document.getElementById('cancel-login').addEventListener('click', () => {
+    document.getElementById('admin-login-modal').classList.remove('show');
+});
+
+// Admin Login
+document.getElementById('admin-login-form').addEventListener('submit', (e) => {
+    e.preventDefault();
+    const password = document.getElementById('admin-password').value;
+    if (password === ADMIN_PASSWORD) {
+        isAdminLoggedIn = true;
+        document.getElementById('admin-login-modal').classList.remove('show');
+        navigateToPage('admin');
+        loadAdminFields(window.elementSdk ? window.elementSdk.getLatestConfig() : defaultConfig);
+    } else {
+        document.getElementById('login-error').classList.add('show');
+    }
+});
+
+// Admin Save Button
+document.getElementById('save-admin-btn').addEventListener('click', () => {
+    document.getElementById('save-confirm-modal').classList.add('show');
+});
+
+// Admin Confirm Save
+document.getElementById('confirm-save-btn').addEventListener('click', () => {
+    document.getElementById('save-confirm-modal').classList.remove('show');
+    
+    // --- Save Logic ---
+    const currentConfig = window.elementSdk ? window.elementSdk.getLatestConfig() : { ...defaultConfig };
+
+    // Update image fields based on admin panel previews (which hold base64/URL data)
+    const heroImagePreview = document.getElementById('hero-image-preview');
+    const heroImageData = heroImagePreview.querySelector('img') ? heroImagePreview.querySelector('img').src : '';
+
+    const gallery1Preview = document.getElementById('gallery1-preview');
+    const gallery1ImageData = gallery1Preview.querySelector('img') ? gallery1Preview.querySelector('img').src : '';
+    const gallery2Preview = document.getElementById('gallery2-preview');
+    const gallery2ImageData = gallery2Preview.querySelector('img') ? gallery2Preview.querySelector('img').src : '';
+    const gallery3Preview = document.getElementById('gallery3-preview');
+    const gallery3ImageData = gallery3Preview.querySelector('img') ? gallery3Preview.querySelector('img').src : '';
+    const gallery4Preview = document.getElementById('gallery4-preview');
+    const gallery4ImageData = gallery4Preview.querySelector('img') ? gallery4Preview.querySelector('img').src : '';
+
+    // Get product image data
+    const getProductImageData = (productId) => {
+        const preview = document.getElementById(`product-preview-${productId}`);
+        return preview && preview.querySelector('img') ? preview.querySelector('img').src : '';
+    };
+
+    // Get featured image data
+    const getFeaturedImageData = (featuredNum) => {
+        const preview = document.getElementById(`featured-preview-${featuredNum}`);
+        return preview && preview.querySelector('img') ? preview.querySelector('img').src : '';
+    };
+
+    // Get social icon data
+    const getSocialIconData = (socialType) => {
+        const preview = document.getElementById(`social-preview-${socialType}`);
+        return preview && preview.querySelector('img') ? preview.querySelector('img').src : '';
+    };
+
+    // Get location map data
+    const locationMapPreview = document.getElementById('location-map-preview');
+    const locationMapImageData = locationMapPreview && locationMapPreview.querySelector('img') ? locationMapPreview.querySelector('img').src : '';
+
+
+    const newConfig = {
+        ...currentConfig,
+        site_title: document.getElementById('admin-site-title').value,
+        hero_title: document.getElementById('admin-hero-title').value,
+        hero_subtitle: document.getElementById('admin-hero-subtitle').value,
+        cta_primary: document.getElementById('admin-cta-primary').value,
+        cta_secondary: document.getElementById('admin-cta-secondary').value,
+        about_description: document.getElementById('admin-about-desc').value,
+        vision: document.getElementById('admin-vision').value,
+        mission: document.getElementById('admin-mission').value,
+        testimonial1_text: document.getElementById('admin-testimonial1-text').value,
+        testimonial1_author: document.getElementById('admin-testimonial1-author').value,
+        testimonial2_text: document.getElementById('admin-testimonial2-text').value,
+        testimonial2_author: document.getElementById('admin-testimonial2-author').value,
+        testimonial3_text: document.getElementById('admin-testimonial3-text').value,
+        testimonial3_author: document.getElementById('admin-testimonial3-author').value,
+        whatsapp_number: document.getElementById('admin-whatsapp').value,
+        whatsapp_custom_link: document.getElementById('admin-whatsapp-link').value,
+        instagram_handle: document.getElementById('admin-instagram').value,
+        instagram_custom_link: document.getElementById('admin-instagram-link').value,
+        email_address: document.getElementById('admin-email').value,
+        email_custom_link: document.getElementById('admin-email-link').value,
+        school_address: document.getElementById('admin-address').value,
+        footer_text: document.getElementById('admin-footer').value,
+        bg_color: document.getElementById('admin-bg-color').value,
+        surface_color: document.getElementById('admin-surface-color').value,
+        text_color: document.getElementById('admin-text-color').value,
+        primary_color: document.getElementById('admin-primary-color').value,
+        secondary_color: document.getElementById('admin-secondary-color').value,
+        font_size: document.getElementById('admin-font-size').value,
+        
+        // Image data to save
+        hero_img: heroImageData,
+        gallery_img_1: gallery1ImageData,
+        gallery_img_2: gallery2ImageData,
+        gallery_img_3: gallery3ImageData,
+        gallery_img_4: gallery4ImageData,
+        location_map_img: locationMapImageData,
+        social_icon_wa: getSocialIconData('wa'),
+        social_icon_ig: getSocialIconData('ig'),
+        social_icon_email: getSocialIconData('email'),
+        featured_img_1: getFeaturedImageData(1),
+        featured_img_2: getFeaturedImageData(2),
+        featured_img_3: getFeaturedImageData(3),
+        product_img_strawberry_cake: getProductImageData('strawberry-cake'),
+        product_img_pudding_coklat: getProductImageData('pudding-coklat'),
+        product_img_roti_coklat: getProductImageData('roti-coklat'),
+        product_img_tiramisu_cake: getProductImageData('tiramisu-cake'),
+        product_img_es_buah: getProductImageData('es-buah'),
+        product_img_klepon: getProductImageData('klepon'),
+        product_img_jus_alpukat: getProductImageData('jus-alpukat'),
+        product_img_onde_onde: getProductImageData('onde-onde'),
+    };
+
+    if (window.elementSdk) {
+        window.elementSdk.setConfig(newConfig); // Platform saves the config
+    } else {
+        // Fallback for local testing (not implemented in this sandbox environment)
+        console.log('Simulating save:', newConfig);
+        updateUI(newConfig); // Manually update UI if not on platform
+    }
+    
+    // Show success message
+    const successMsg = document.getElementById('save-success');
+    successMsg.textContent = '✅ Semua perubahan berhasil disimpan dan tidak akan hilang saat refresh!';
+    successMsg.classList.add('show');
+    
+    setTimeout(() => {
+        successMsg.classList.remove('show');
+    }, 4000);
+});
+
+// Cancel save button
+document.getElementById('cancel-save-btn').addEventListener('click', () => {
+    document.getElementById('save-confirm-modal').classList.remove('show');
+});
+
+// --- Image Upload/Remove Handlers (Simplified, for admin panel display only) ---
+
+// File input handlers for dynamic preview
+document.getElementById('admin-hero-image-file').addEventListener('change', (e) => {
+    const file = e.target.files[0];
+    if (file) {
+        const reader = new FileReader();
+        reader.onload = function(event) {
+            updateHeroImagePreview(event.target.result);
+        };
+        reader.readAsDataURL(file);
+    }
+});
+
+document.querySelectorAll('.featured-image-input').forEach(input => {
+    input.addEventListener('change', (e) => {
+        const file = e.target.files[0];
+        const featuredNum = input.getAttribute('data-featured');
+        if (file && featuredNum) {
+            const reader = new FileReader();
+            reader.onload = function(event) {
+                updateFeaturedImagePreview(featuredNum, event.target.result);
+            };
+            reader.readAsDataURL(file);
+        }
+    });
+});
+
+document.querySelectorAll('.product-image-input').forEach(input => {
+    input.addEventListener('change', (e) => {
+        const file = e.target.files[0];
+        const productId = input.getAttribute('data-product');
+        if (file && productId) {
+            const reader = new FileReader();
+            reader.onload = function(event) {
+                updateProductImagePreview(productId, event.target.result);
+            };
+            reader.readAsDataURL(file);
+        }
+    });
+});
+
+document.querySelectorAll('.social-icon-input').forEach(input => {
+    input.addEventListener('change', (e) => {
+        const file = e.target.files[0];
+        const socialType = input.getAttribute('data-social');
+        if (file && socialType) {
+            const reader = new FileReader();
+            reader.onload = function(event) {
+                const imageUrl = event.target.result;
+                updateSocialIconPreview(socialType, imageUrl);
+            };
+            reader.readAsDataURL(file);
+        }
+    });
+});
+
+// Remove hero image button
+document.getElementById('remove-hero-image').addEventListener('click', () => {
+    document.getElementById('admin-hero-image-file').value = '';
+    updateHeroImagePreview('');
+});
+
+// Remove gallery image buttons
+document.querySelectorAll('.gallery-remove-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+        const galleryNum = btn.getAttribute('data-gallery');
+        document.getElementById(`admin-gallery${galleryNum}-file`).value = '';
+        updateGalleryPreview(galleryNum, '');
+    });
+});
+
+// Remove featured image buttons
+document.querySelectorAll('.featured-remove-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+        const featuredNum = btn.getAttribute('data-featured');
+        document.getElementById(`featured-img-${featuredNum}`).value = '';
+        updateFeaturedImagePreview(featuredNum, '');
+    });
+});
+
+// Remove product image buttons
+document.querySelectorAll('.product-remove-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+        const productId = btn.getAttribute('data-product');
+        document.getElementById(`product-img-${productId}`).value = '';
+        updateProductImagePreview(productId, '');
+    });
+});
+
+// Remove social icon buttons
+document.querySelectorAll('.social-remove-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+        const socialType = btn.getAttribute('data-social');
+        document.getElementById(`social-img-${socialType}`).value = '';
+        updateSocialIconPreview(socialType, '');
+    });
+});
+
+// Remove location map button
+document.getElementById('remove-location-map').addEventListener('click', () => {
+    document.getElementById('admin-location-map-file').value = '';
+    updateLocationMapPreview('');
+});
+
+
+// Load initial UI based on defaultConfig
+updateUI(defaultConfig);
+
+// Helper to get all product images (used in detail view logic)
+function getProductImages(config) {
+    return {
+        'strawberry-cake': config.product_img_strawberry_cake || defaultConfig.product_img_strawberry_cake,
+        'pudding-coklat': config.product_img_pudding_coklat || defaultConfig.product_img_pudding_coklat,
+        'roti-coklat': config.product_img_roti_coklat || defaultConfig.product_img_roti_coklat,
+        'tiramisu-cake': config.product_img_tiramisu_cake || defaultConfig.product_img_tiramisu_cake,
+        'es-buah': config.product_img_es_buah || defaultConfig.product_img_es_buah,
+        'klepon': config.product_img_klepon || defaultConfig.product_img_klepon,
+        'jus-alpukat': config.product_img_jus_alpukat || defaultConfig.product_img_jus_alpukat,
+        'onde-onde': config.product_img_onde_onde || defaultConfig.product_img_onde_onde,
+    };
+}
+</script>
+</body>
+</html>
+
