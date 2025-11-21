@@ -1,89 +1,74 @@
-<section id="admin-page" class="page">
-    <div class="admin-container">
-        <h1>🛠️ Panel Admin Website</h1>
+// ===== SISTEM UPLOAD GAMBAR + AUTO SAVE LOCALSTORAGE =====
 
-        <div class="admin-section">
-            <h2>📝 Konten Website</h2>
-            <div class="admin-card">
-                <h3>Header & Navigasi</h3>
-                <div class="form-group">
-                    <label for="admin-site-title">Judul Website</label>
-                    <input type="text" id="admin-site-title" class="admin-input" value="Cita Rasa MARON">
-                </div>
-            </div>
+// Daftar elemen gambar yang ada di admin panel
+const imageInputs = document.querySelectorAll(
+    '.featured-image-input, .gallery-image-input, .product-image-input, #admin-hero-image-file'
+);
 
-            <div class="admin-card">
-                <h3>Hero Section</h3>
-                <div class="form-group">
-                    <label for="admin-hero-title">Judul Utama</label>
-                    <input type="text" id="admin-hero-title" class="admin-input" value="Rasa Otentik dari Siswa Berbakat">
-                </div>
-                <div class="form-group">
-                    <label for="admin-hero-subtitle">Subjudul</label>
-                    <textarea id="admin-hero-subtitle" class="admin-input" rows="3">Kami menyajikan produk tata boga premium dari kreasi terbaik siswa SMAN 1 MARON.</textarea>
-                </div>
-            </div>
-            
-            <div class="admin-card">
-                <h3>🖼️ Gambar Hero</h3>
-                <div class="form-group">
-                    <label for="admin-hero-image-file">Upload Gambar Utama Hero</label>
-                    <input type="file" id="admin-hero-image-file" class="admin-input" accept="image/*" style="padding: 0.5rem;">
-                    <small style="display: block; margin-top: 0.5rem; opacity: 0.7;">Kosongkan untuk emoji default 🎂</small>
-                </div>
-                <div style="margin-top: 1rem; padding: 1rem; background-color: #F5F7FA; border-radius: 8px;">
-                    <strong style="display: block; margin-bottom: 0.5rem;">Preview Gambar Hero:</strong>
-                    <div id="hero-image-preview" class="image-preview-box"> 🎂 </div>
-                    <button type="button" id="remove-hero-image" class="btn btn-danger" style="margin-top: 0.5rem; display: none;">🗑️ Hapus Gambar</button>
-                </div>
-            </div>
-            <div class="admin-card">
-                <h3>Tentang Kami</h3>
-                <div class="form-group">
-                    <label for="admin-about-desc">Deskripsi Singkat</label>
-                    <textarea id="admin-about-desc" class="admin-input" rows="3">Program Tata Boga SMAN 1 Maron adalah wujud nyata pembelajaran kewirausahaan.</textarea>
-                </div>
-            </div>
+// Fungsi membaca gambar
+function readImageFile(input, callback) {
+    const file = input.files[0];
+    if (!file) return;
 
-            </div>
+    const reader = new FileReader();
+    reader.onload = e => callback(e.target.result);
+    reader.readAsDataURL(file);
+}
 
-        <div class="admin-section">
-            <h2>🍰 Pengaturan Produk</h2>
-            <div class="admin-card">
-                <h3>Produk Unggulan</h3>
-                <div class="form-group" style="border-bottom: 1px solid rgba(0,0,0,0.05); padding-bottom: 1rem; margin-bottom: 1rem;">
-                    <label for="featured-img-1"><strong>Produk Unggulan 1: Strawberry Cake</strong></label>
-                    <input type="file" id="featured-img-1" class="admin-input featured-image-input" data-featured="1" accept="image/*" style="padding: 0.5rem;">
-                    <div id="featured-preview-1" class="image-preview-box featured-preview"> 🍓 </div>
-                    <button type="button" class="featured-remove-btn btn-danger" data-featured="1" style="margin-top: 0.5rem; display: none;">🗑️ Hapus</button>
-                </div>
-                </div>
-        </div>
-        
-        <div class="admin-section">
-            <h2>📸 Galeri Foto</h2>
-            <div class="admin-card">
-                <div class="form-group">
-                    <label for="admin-gallery1-file">Upload Gambar Gallery 1</label>
-                    <input type="file" id="admin-gallery1-file" class="admin-input" accept="image/*" style="padding: 0.5rem;">
-                    <div id="gallery1-preview" class="image-preview-box gallery-preview"> 👨‍🍳 </div>
-                    <button type="button" class="gallery-remove-btn btn-danger" data-gallery="1" style="margin-top: 0.5rem; display: none;">🗑️ Hapus</button>
-                </div>
-                </div>
-        </div>
+// Saat user upload gambar
+imageInputs.forEach(input => {
+    input.addEventListener('change', () => {
+        const id = input.id;
+        const key = `img_${id}`; // penyimpanan di localStorage
 
-        <div class="admin-section">
-            <h2>🎨 Warna & Gaya</h2>
-            <div class="admin-card">
-                <div class="form-group">
-                    <label for="admin-primary-color">Warna Utama (Primary)</label>
-                    <input type="color" id="admin-primary-color" class="admin-input color-input" value="#1E88E5">
-                </div>
-                </div>
-        </div>
+        readImageFile(input, (base64) => {
+            // Simpan ke localStorage
+            localStorage.setItem(key, base64);
 
-        <button id="save-config-btn" class="btn btn-primary" style="width: 100%; padding: 1rem; margin-top: 2rem;">💾 Simpan Konfigurasi</button>
-        <div id="save-success" class="success-message"></div>
-    </div>
-</section>
+            // Temukan preview yang cocok
+            const previewId = input.dataset.featured
+                ? `featured-preview-${input.dataset.featured}`
+                : input.dataset.product
+                ? `product-preview-${input.dataset.product}`
+                : input.dataset.gallery
+                ? `gallery${input.dataset.gallery}-preview`
+                : id === "admin-hero-image-file"
+                ? "hero-image-preview"
+                : null;
 
+            if (previewId) {
+                const preview = document.getElementById(previewId);
+                preview.innerHTML = `<img src="${base64}" style="width:100%;height:100%;object-fit:cover;border-radius:10px;">`;
+            }
+        });
+    });
+});
+
+// Saat halaman baru dibuka, load gambar yang sudah disimpan
+window.addEventListener('load', () => {
+    Object.keys(localStorage).forEach(key => {
+        if (!key.startsWith("img_")) return;
+
+        const base64 = localStorage.getItem(key);
+        const id = key.replace("img_", "");
+
+        const input = document.getElementById(id);
+
+        if (!input) return;
+
+        const previewId = input.dataset.featured
+            ? `featured-preview-${input.dataset.featured}`
+            : input.dataset.product
+            ? `product-preview-${input.dataset.product}`
+            : input.dataset.gallery
+            ? `gallery${input.dataset.gallery}-preview`
+            : id === "admin-hero-image-file"
+            ? "hero-image-preview"
+            : null;
+
+        if (previewId) {
+            const preview = document.getElementById(previewId);
+            preview.innerHTML = `<img src="${base64}" style="width:100%;height:100%;object-fit:cover;border-radius:10px;">`;
+        }
+    });
+});
